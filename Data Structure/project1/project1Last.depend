@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1673356643 source:c:\users\easy life\desktop\projectonedata\project1last\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
