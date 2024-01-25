@@ -1,4 +1,0 @@
-Azicare:500:Azithromycin:Antibiotic:pain,tonsillitis,skinallergy:3:11
-Azimex:500:Azithromycin:y:pneumonia,tonsillitis,skinalle:3:7
-Paramol:Paracetamol:Pain killer:fever,pain:3/2026:9:BeitJala Pharmaceutical
-

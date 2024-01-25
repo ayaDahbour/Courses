@@ -1,4 +1,0 @@
-Azicare500:Azithromycin:Antibiotic:pain,tonsillitis,skin allergy:3/2025:11:Pharmacare PLC
-Paramol:Paracetamol:Pain killer:fever,pain:3/2026:9:Beit Jala Pharmaceutical
-Azicare300:Azithromycin:Antibiotic:pain,tonsillitis,skin allergy:3/2025:11:Pharmacare PLC
-Paramol100:Paracetamol:Pain killer:fever,pain:3/2026:9:Beit Jala Pharmaceutical
