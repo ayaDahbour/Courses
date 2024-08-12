@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #667eea, #764ba2);
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            margin-top: 50px;
+        }
+        .tablinks {
+            display: block;
+            background-color: #fff;
+            color: #333;
+            padding: 14px 20px;
+            margin: 10px auto;
+            width: 250px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        .tablinks:hover {
+            background-color: #ddd;
+        }
+        .tabcontent {
+            display: none;
+            padding: 20px;
+            text-align: left;
+            margin: auto;
+            width: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+        }
+        .tabcontent h3 {
+            text-align: center;
+        }
+        .label {
+            display: inline-block;
+            width: 200px;
+            margin: 10px 0;
+        }
+        input, select {
+            padding: 10px;
+            width: calc(100% - 240px);
+            margin-left: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        button {
+            display: block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 20px auto;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Online Calculator</h1>
+
+<div>
+    <button class="tablinks" onclick="openTab(event, 'BitsRate')">Bits and Rate Calculations</button>
+    <button class="tablinks" onclick="openTab(event, 'ResourceElements')">Resource Elements and OFDM</button>
+    <button class="tablinks" onclick="openTab(event, 'PowerTransmission')">Power Transmission Calculations</button>
+    <button class="tablinks" onclick="openTab(event, 'ThroughputCSMA')">Throughput CSMA Calculations</button>
+    <button class="tablinks" onclick="openTab(event, 'CellularSystem')">Cellular System Design</button>
+</div>
+
+<div id="BitsRate" class="tabcontent">
+    <h3>Bits and Rate Calculations</h3>
+    <label class="label">Bandwidth:</label>
+    <input type="number" id="bandwidth"><select id="bandwidthUnit">
+        <option value="Hz">Hz</option>
+        <option value="kHz">kHz</option>
+        <option value="MHz">MHz</option>
+        <option value="GHz">GHz</option>
+    </select><br><br>
+    <label class="label">Quantizer Bits:</label>
+    <input type="number" id="quantizerBits"><br><br>
+    <label class="label">Compression Rate of Source Encoder (Rs):</label>
+    <input type="number" id="sourceEncoderRate"><br><br>
+    <label class="label">Channel Encoder Rate (Rc):</label>
+    <input type="number" id="channelEncoderRate"><br><br>
+    <label class="label">Interleaver Type:</label>
+    <select id="interleaverBits">
+        <option value="512">512-bit Interleaver</option>
+        <option value="1024">1024-bit Interleaver</option>
+        <option value="2048">2048-bit Interleaver</option>
+        <option value="4096">4096-bit Interleaver</option>
+    </select><br><br>
+    <button onclick="calculateBitsAndRate()">Calculate</button>
+    <div id="bitsRateResults" class="result"></div>
+</div>
+
+<div id="ResourceElements" class="tabcontent">
+    <h3>Resource Elements and OFDM</h3>
+    <label class="label">Resource Block Bandwidth:</label>
+    <input type="number" id="resourceBlockBandwidth"><select id="resourceBlockBandwidthUnit">
+        <option value="kHz">kHz</option>
+        <option value="MHz">MHz</option>
+    </select><br><br>
+    <label class="label">Subcarrier Spacing:</label>
+    <input type="number" id="subcarrierSpacing"><select id="subcarrierSpacingUnit">
+        <option value="kHz">kHz</option>
+        <option value="MHz">MHz</option>
+    </select><br><br>
+    <label class="label">Number of OFDM Symbols per Resource Block:</label>
+    <input type="number" id="numOFDMSymbols"><br><br>
+    <label class="label">Resource Block Duration:</label>
+    <input type="number" id="resourceBlockDuration"><select id="resourceBlockDurationUnit">
+        <option value="ms">ms</option>
+        <option value="s">s</option>
+    </select><br><br>
+    <label class="label">Modulation Method:</label>
+    <select id="modulationMethod">
+        <option value="1024-QAM">1024-QAM</option>
+        <option value="64-QAM">64-QAM</option>
+        <option value="QPSK">QPSK</option>
+        <option value="8-PSK">8-PSK</option>
+    </select><br><br>
+    <button onclick="calculateResourceElements()">Calculate</button>
+    <div id="resourceElementsResults" class="result"></div>
+</div>
+
+<div id="PowerTransmission" class="tabcontent">
+    <h3>Power Transmission Calculations</h3>
+    <label class="label">Path Loss (Lp):</label>
+    <input type="number" id="pathLoss"><select id="pathLossUnit">
+        <option value="dB">dB</option>
+        <option value="dBm">dBm</option>
+        <option value="watt">watt</option>
+    </select><br><br>
+
+    <label class="label">Transmit Antenna Gain (Gt):</label>
+    <input type="number" id="transmitAntennaGain"><select id="transmitAntennaGainUnit">
+        <option value="dB">dB</option>
+        <option value="dBm">dBm</option>
+        <option value="watt">watt</option>
+    </select><br><br>
+
+    <label class="label">Receive Antenna Gain (Gr):</label>
+    <input type="number" id="receiveAntennaGain"><select id="receiveAntennaGainUnit">
+        <option value="dB">dB</option>
+        <option value="dBm">dBm</option>
+        <option value="watt">watt</option>
+    </select><br><br>
+
+    <label class="label">Data Rate (R):</label>
+    <input type="number" id="dataRate"><select id="dataRateUnit">
+        <option value="bps">bps</option>
+        <option value="kbps">kbps</option>
+        <option value="Mbps">Mbps</option>
+        <option value="Gbps">Gbps</option>
+    </select><br><br>
+
+    <label class="label">Antenna Feed Line Loss (Lf):</label>
+    <input type="number" id="antennaFeedLineLoss"><select id="antennaFeedLineLossUnit">
+        <option value="dB">dB</option>
+        <option value="dBm">dBm</option>
+        <option value="watt">watt</option>
+    </select><br><br>
+
+    <label class="label">Other Losses (Lo):</label>
+    <input type="number" id="otherLosses"><select id="otherLossesUnit">
+        <option value="dB">dB</option>
+        <option value="dBm">dBm</option>
+        <option value="watt">watt</option>
+    </select><br><br>
+
+    <label class="label">Fade Margin (F margin):</label>
+    <input type="number" id="fadeMargin"><select id="fadeMarginUnit">
+        <option value="dB">dB</option>
+        <option value="dBm">dBm</option>
+        <option value="watt">watt</option>
+    </select><br><br>
+
+    <label class="label">Receiver Amplifier Gain (At):</label>
+    <input type="number" id="receiverAmplifierGainAt" placeholder="Default: 0"><select id="receiverAmplifierGainUnit">
+        <option value="dB">dB</option>
+        <option value="dBm">dBm</option>
+        <option value="watt">watt</option>
+    </select><br><br>
+
+    <label class="label">Receiver Amplifier Gain (Ar):</label>
+    <input type="number" id="receiverAmplifierGainAr" placeholder="Default: 0"><select id="receiverAmplifierGainArUnit">
+        <option value="dB">dB</option>
+        <option value="dBm">dBm</option>
+        <option value="watt">watt</option>
+    </select><br><br>
+
+    <label class="label">Noise Figure Total (Nf,total):</label>
+    <input type="number" id="noiseFigureTotal"><select id="noiseFigureTotalUnit">
+        <option value="dB">dB</option>
+        <option value="dBm">dBm</option>
+        <option value="watt">watt</option>
+    </select><br><br>
+
+    <label class="label">Noise Temperature (T):</label>
+    <input type="number" id="noiseTemperature"><br><br>
+
+    <label class="label">Link Margin (M):</label>
+    <input type="number" id="linkMargin"><select id="linkMarginUnit">
+        <option value="dB">dB</option>
+        <option value="dBm">dBm</option>
+        <option value="watt">watt</option>
+    </select><br><br>
+
+    <label class="label">Modulation Method:</label>
+    <select id="modulationMethodPower">
+        <option value="1024-QAM">1024-QAM</option>
+        <option value="64-QAM">64-QAM</option>
+        <option value="QPSK">QPSK</option>
+        <option value="8-PSK">8-PSK</option>
+    </select><br><br>
+
+    <label class="label">Maximum Bit Error Rate:</label>
+    <input type="number" id="maxBer"><select id="maxBerUnit">
+        <option value="1e-1">10^-1</option>
+        <option value="1e-2">10^-2</option>
+        <option value="1e-3">10^-3</option>
+        <option value="1e-4">10^-4</option>
+        <option value="1e-6">10^-6</option>
+        <option value="1e-9">10^-9</option>
+    </select><br><br>
+
+    <button onclick="calculatePowerTransmission()">Calculate</button>
+    <div id="powerTransmissionResults" class="result"></div>
+</div>
+
+<div id="ThroughputCSMA" class="tabcontent">
+    <h3>Throughput CSMA Calculations</h3>
+    <label class="label">Data Transmission Bandwidth (B.W):</label>
+    <input type="number" id="dataTransmissionBw"><select id="dataTransmissionBwUnit">
+        <option value="bps">bps</option>
+        <option value="kbps">kbps</option>
+        <option value="Mbps">Mbps</option>
+        <option value="Gbps">Gbps</option>
+    </select><br><br>
+
+    <label class="label">CSMA Method:</label>
+    <select id="csmaMethod">
+        <option value="unslotted-nonpersistent">Unslotted Nonpersistent CSMA</option>
+        <option value="slotted-nonpersistent">Slotted Nonpersistent CSMA</option>
+        <option value="unslotted-1persistent">Unslotted 1-persistent CSMA</option>
+        <option value="slotted-1persistent">Slotted 1-persistent CSMA</option>
+    </select><br><br>
+
+    <label class="label">Maximum Signal Propagation Time (τ):</label>
+    <input type="number" id="maxSignalPropagationTime"><select id="maxSignalPropagationTimeUnit">
+        <option value="s">s</option>
+        <option value="ms">ms</option>
+        <option value="us">us</option>
+        <option value="ns">ns</option>
+    </select><br><br>
+
+    <label class="label">Frame Size:</label>
+    <input type="number" id="frameSize"><select id="frameSizeUnit">
+        <option value="bits">bits</option>
+        <option value="kbits">kbits</option>
+        <option value="Mbits">Mbits</option>
+        <option value="Gbits">Gbits</option>
+    </select><br><br>
+
+    <label class="label">Frame Rate (g):</label>
+    <input type="number" id="frameRate"><select id="frameRateUnit">
+        <option value="frames/sec">frames/sec</option>
+        <option value="kframes/sec">kframes/sec</option>
+        <option value="Mframes/sec">Mframes/sec</option>
+        <option value="Gframes/sec">Gframes/sec</option>
+    </select><br><br>
+
+    <button onclick="calculateThroughputCSMA()">Calculate</button>
+    <div id="throughputCSMAResults" class="result"></div>
+</div>
+
+<div id="CellularSystem" class="tabcontent">
+    <h3>Cellular System Design</h3>
+    <label class="label">Number of Timeslots per Carrier:</label>
+    <input type="number" id="timeslotsPerCarrier"><br><br>
+    <label class="label">Area of the City:</label>
+    <input type="number" id="cityArea"><select id="cityAreaUnit">
+        <option value="m2">m²</option>
+        <option value="km2">km²</option>
+    </select><br><br>
+    <label class="label">Number of Subscribers (U):</label>
+    <input type="number" id="numSubscribers"><select id="numSubscribersUnit">
+        <option value="subscribers">subscribers</option>
+        <option value="kSubscribers">thousands</option>
+    </select><br><br>
+    <label class="label">Average Number of Calls per Unit Time (λ):</label>
+    <input type="number" id="avgCalls"><select id="avgCallsUnit">
+        <option value="perSecond">per Second</option>
+        <option value="perMinute">per Minute</option>
+        <option value="perHour">per Hour</option>
+        <option value="perDay">per Day</option>
+    </select><br><br>
+    <label class="label">Average Call Duration (H):</label>
+    <input type="number" id="avgCallDuration"><select id="avgCallDurationUnit">
+        <option value="seconds">seconds</option>
+        <option value="minutes">minutes</option>
+    </select><br><br>
+    <label class="label">Call Drop Probability (GoS) for Erlang B:</label>
+    <select id="gos">
+        <option value="0.001">0.001</option>
+        <option value="0.002">0.002</option>
+        <option value="0.005">0.005</option>
+        <option value="0.01">0.01</option>
+        <option value="0.012">0.012</option>
+        <option value="0.013">0.013</option>
+        <option value="0.015">0.015</option>
+        <option value="0.02">0.02</option>
+        <option value="0.03">0.03</option>
+        <option value="0.05">0.05</option>
+        <option value="0.1">0.1</option>
+        <option value="0.2">0.2</option>
+        <option value="0.3">0.3</option>
+    </select><br><br>
+    <label class="label">Minimum SIR:</label>
+    <input type="number" id="minSIR"><select id="minSIRUnit">
+        <option value="dB">dB</option>
+        <option value="dBm">dBm</option>
+        <option value="watt">watt</option>
+    </select><br><br>
+    <label class="label">Measured Power at Reference Distance (P0):</label>
+    <input type="number" id="measuredPower"><select id="measuredPowerUnit">
+        <option value="dB">dB</option>
+        <option value="dBm">dBm</option>
+        <option value="watt">watt</option>
+    </select><br><br>
+    <label class="label">Reference Distance (d0):</label>
+    <input type="number" id="refDistance"><select id="refDistanceUnit">
+        <option value="m">meters</option>
+        <option value="km">kilometers</option>
+    </select><br><br>
+    <label class="label">Path Loss Exponent (n):</label>
+    <input type="number" id="pathLossExponent"><br><br>
+    <label class="label">Receiver Sensitivity:</label>
+    <input type="number" id="receiverSensitivity"><select id="receiverSensitivityUnit">
+        <option value="dB">dB</option>
+        <option value="dBm">dBm</option>
+        <option value="watt">watt</option>
+        <option value="kW">kilo watt</option>
+        <option value="µwatt">µwatt</option>
+    </select><br><br>
+    <button onclick="calculateCellularSystem()">Calculate</button>
+    <div id="cellularSystemResults" class="result"></div>
+</div>
+
+<script>
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+function calculateBitsAndRate() {
+    var bandwidth = parseFloat(document.getElementById("bandwidth").value);
+    var quantizerBits = parseInt(document.getElementById("quantizerBits").value);
+    var sourceEncoderRate = parseFloat(document.getElementById("sourceEncoderRate").value);
+    var channelEncoderRate = parseFloat(document.getElementById("channelEncoderRate").value);
+    var interleaverBits = parseInt(document.getElementById("interleaverBits").value);
+
+    var bandwidthUnit = document.getElementById("bandwidthUnit").value;
+
+    if (bandwidthUnit == "kHz") {
+        bandwidth *= 1e3;
+    } else if (bandwidthUnit == "MHz") {
+        bandwidth *= 1e6;
+    } else if (bandwidthUnit == "GHz") {
+        bandwidth *= 1e9;
+    }
+
+    if (isNaN(bandwidth) || isNaN(quantizerBits) || isNaN(sourceEncoderRate) || isNaN(channelEncoderRate) || isNaN(interleaverBits)) {
+        alert("Please enter valid numbers for all inputs.");
+        return;
+    }
+
+    var samplingFrequency = 2 * bandwidth;
+    var quantizationLevels = Math.pow(2, quantizerBits);
+    var inputBits = samplingFrequency * quantizerBits;
+    var sourceEncoderOutputBits = inputBits * sourceEncoderRate;
+    var channelEncoderOutputBits = sourceEncoderOutputBits / channelEncoderRate;
+    var interleaverOutputBits = channelEncoderOutputBits; // as given
+
+    var results = `
+        Sampling Frequency: ${convertToReadableUnit(samplingFrequency, 'Hz')}<br>
+        Number of Quantization Levels: ${quantizationLevels.toLocaleString()}<br>
+        Bit Rate at the Output of Source Encoder: ${convertToReadableUnit(sourceEncoderOutputBits, 'bits/sec')}<br>
+        Bit Rate at the Output of Channel Encoder: ${convertToReadableUnit(channelEncoderOutputBits, 'bits/sec')}<br>
+        Bit Rate at the Output of Interleaver: ${convertToReadableUnit(interleaverOutputBits, 'bits/sec')}
+    `;
+    document.getElementById("bitsRateResults").innerHTML = results;
+}
+
+function convertToReadableUnit(value, unit) {
+    if (value >= 1e9) {
+        return (value / 1e9).toFixed(2) + ' G' + unit;
+    } else if (value >= 1e6) {
+        return (value / 1e6).toFixed(2) + ' M' + unit;
+    } else if (value >= 1e3) {
+        return (value / 1e3).toFixed(2) + ' K' + unit;
+    } else {
+        return value.toFixed(2) + ' ' + unit;
+    }
+}
+
+function calculateResourceElements() {
+    var resourceBlockBandwidth = parseFloat(document.getElementById("resourceBlockBandwidth").value);
+    var subcarrierSpacing = parseFloat(document.getElementById("subcarrierSpacing").value);
+    var numOFDMSymbols = parseInt(document.getElementById("numOFDMSymbols").value);
+    var resourceBlockDuration = parseFloat(document.getElementById("resourceBlockDuration").value);
+    var modulationMethod = document.getElementById("modulationMethod").value;
+
+    var resourceBlockBandwidthUnit = document.getElementById("resourceBlockBandwidthUnit").value;
+    var subcarrierSpacingUnit = document.getElementById("subcarrierSpacingUnit").value;
+    var resourceBlockDurationUnit = document.getElementById("resourceBlockDurationUnit").value;
+
+    if (resourceBlockBandwidthUnit == "MHz") {
+        resourceBlockBandwidth *= 1e3; // Convert MHz to kHz
+    }
+    if (subcarrierSpacingUnit == "MHz") {
+        subcarrierSpacing *= 1e3; // Convert MHz to kHz
+    }
+    if (resourceBlockDurationUnit == "s") {
+        resourceBlockDuration *= 1e3; // Convert seconds to ms
+    }
+
+    if (isNaN(resourceBlockBandwidth) || isNaN(subcarrierSpacing) || isNaN(numOFDMSymbols) || isNaN(resourceBlockDuration)) {
+        alert("Please enter valid numbers for all inputs.");
+        return;
+    }
+
+    if (resourceBlockBandwidth % subcarrierSpacing !== 0) {
+        alert("Invalid input: Resource Block Bandwidth must be an integer multiple of Subcarrier Spacing.");
+        return;
+    }
+
+    var bitsPerResourceElement;
+    switch (modulationMethod) {
+        case "1024-QAM":
+            bitsPerResourceElement = 10;
+            break;
+        case "64-QAM":
+            bitsPerResourceElement = 6;
+            break;
+        case "QPSK":
+            bitsPerResourceElement = 2;
+            break;
+        case "8-PSK":
+            bitsPerResourceElement = 3;
+            break;
+    }
+
+    var numSubcarriers = resourceBlockBandwidth / subcarrierSpacing;
+    var bitsPerOFDMSymbol = bitsPerResourceElement * numSubcarriers;
+    var bitsPerOFDMResourceBlock = bitsPerOFDMSymbol * numOFDMSymbols;
+    var maxTransmissionRate = (bitsPerOFDMResourceBlock / resourceBlockDuration) * 1e3; // convert ms to sec
+
+    var results = `
+        Bits per Resource Element: ${bitsPerResourceElement} bits<br>
+        Subcarriers: ${numSubcarriers.toFixed(2)}<br>
+        Bits per OFDM Symbol: ${convertToReadableUnit(bitsPerOFDMSymbol, 'bits')}<br>
+        Bits per OFDM Resource Block: ${convertToReadableUnit(bitsPerOFDMResourceBlock, 'bits')}<br>
+        Max Transmission Rate: ${convertToReadableUnit(maxTransmissionRate, 'bits/sec')}
+    `;
+    document.getElementById("resourceElementsResults").innerHTML = results;
+}
+
+function convertToDb(value, unit) {
+    switch (unit) {
+        case "dB":
+            return value;
+        case "dBm":
+            return value - 30;
+        case "watt":
+            return 10 * Math.log10(value);
+        case "kW":
+            return 10 * Math.log10(value * 1e3);
+        case "µwatt":
+            return 10 * Math.log10(value / 1e6);
+        default:
+            throw new Error("Invalid unit for conversion to dB");
+    }
+}
+
+function convertToWatt(value, unit) {
+    switch (unit) {
+        case "dB":
+            return Math.pow(10, value / 10);
+        case "dBm":
+            return Math.pow(10, (value - 30) / 10);
+        case "watt":
+            return value;
+        case "kW":
+            return value * 1e3;
+        case "µwatt":
+            return value * 1e-6;
+        default:
+            throw new Error("Invalid unit for conversion to watt");
+    }
+}
+
+function calculatePowerTransmission() {
+    try {
+        var pathLoss = parseFloat(document.getElementById("pathLoss").value);
+        var transmitAntennaGain = parseFloat(document.getElementById("transmitAntennaGain").value);
+        var receiveAntennaGain = parseFloat(document.getElementById("receiveAntennaGain").value);
+        var dataRate = parseFloat(document.getElementById("dataRate").value);
+        var antennaFeedLineLoss = parseFloat(document.getElementById("antennaFeedLineLoss").value);
+        var otherLosses = parseFloat(document.getElementById("otherLosses").value);
+        var fadeMargin = parseFloat(document.getElementById("fadeMargin").value);
+        var receiverAmplifierGainAt = parseFloat(document.getElementById("receiverAmplifierGainAt").value) || 0;
+        var receiverAmplifierGainAr = parseFloat(document.getElementById("receiverAmplifierGainAr").value) || 0;
+        var noiseFigureTotal = parseFloat(document.getElementById("noiseFigureTotal").value);
+        var noiseTemperature = parseFloat(document.getElementById("noiseTemperature").value);
+        var linkMargin = parseFloat(document.getElementById("linkMargin").value);
+        var modulationMethod = document.getElementById("modulationMethodPower").value;
+        var maxBerEntry = parseFloat(document.getElementById("maxBer").value);
+        var maxBerUnit = document.getElementById("maxBerUnit").value;
+
+        // Convert maximum BER to linear scale
+        var maxBer = maxBerEntry * parseFloat(maxBerUnit);
+
+        // Convert input values to dB
+        var pathLossDb = convertToDb(pathLoss, document.getElementById("pathLossUnit").value);
+        var transmitAntennaGainDb = convertToDb(transmitAntennaGain, document.getElementById("transmitAntennaGainUnit").value);
+        var receiveAntennaGainDb = convertToDb(receiveAntennaGain, document.getElementById("receiveAntennaGainUnit").value);
+        var antennaFeedLineLossDb = convertToDb(antennaFeedLineLoss, document.getElementById("antennaFeedLineLossUnit").value);
+        var otherLossesDb = convertToDb(otherLosses, document.getElementById("otherLossesUnit").value);
+        var fadeMarginDb = convertToDb(fadeMargin, document.getElementById("fadeMarginUnit").value);
+        var receiverAmplifierGainAtDb = convertToDb(receiverAmplifierGainAt, document.getElementById("receiverAmplifierGainUnit").value);
+        var receiverAmplifierGainArDb = convertToDb(receiverAmplifierGainAr, document.getElementById("receiverAmplifierGainArUnit").value);
+        var noiseFigureTotalDb = convertToDb(noiseFigureTotal, document.getElementById("noiseFigureTotalUnit").value);
+        var linkMarginDb = convertToDb(linkMargin, document.getElementById("linkMarginUnit").value);
+
+        if (pathLossDb <= 0 || transmitAntennaGainDb <= 0 || receiveAntennaGainDb < 0 || dataRate <= 0 ||
+            antennaFeedLineLossDb <= 0 || otherLossesDb <= 0 || fadeMarginDb <= 0 || noiseFigureTotalDb <= 0 || noiseTemperature <= 0 || linkMarginDb <= 0 || !modulationMethod) {
+            throw new Error("All inputs must be positive numbers.");
+        }
+
+        // Eb/N0 table
+        var ebNoTable = {
+            "1024-QAM": {1e-1: 12.0, 1e-2: 15.0, 1e-3: 18.0, 1e-4: 21.0, 1e-6: 24.0, 1e-9: 30.0},
+            "64-QAM": {1e-1: 8.0, 1e-2: 10.0, 1e-3: 12.0, 1e-4: 14.0, 1e-6: 18.0, 1e-9: 24.0},
+            "QPSK": {1e-1: 4.0, 1e-2: 6.0, 1e-3: 8.0, 1e-4: 10.0, 1e-6: 14.0, 1e-9: 20.0},
+            "8-PSK": {1e-1: 6.0, 1e-2: 8.0, 1e-3: 10.0, 1e-4: 12.0, 1e-6: 16.0, 1e-9: 22.0}
+        };
+
+        var ebNo = ebNoTable[modulationMethod][maxBer];
+        if (!ebNo) {
+            throw new Error("Invalid BER value for the selected modulation method.");
+        }
+
+        // Constants
+        var k = 1.38e-23; // Boltzmann constant
+        var kDb = 10 * Math.log10(k); // Convert Boltzmann constant to dB
+        var noiseTemperatureDb = 10 * Math.log10(noiseTemperature); // Convert noise temperature to dB
+        var dataRateDb = 10 * Math.log10(dataRate * 1e3); // Convert data rate to dB and kbps to bps
+
+        // Calculate Pr in dB
+        var prDb = linkMarginDb + kDb + noiseTemperatureDb + noiseFigureTotalDb + dataRateDb + ebNo;
+
+        // Calculate Pt in dB
+        var ptDb = prDb + pathLossDb + antennaFeedLineLossDb + otherLossesDb + fadeMarginDb - transmitAntennaGainDb - receiveAntennaGainDb - receiverAmplifierGainAtDb - receiverAmplifierGainArDb;
+
+        // Convert Pt to watts
+        var ptWatt = convertToWatt(ptDb, "dB");
+
+        // Display result
+        var results = `Total Transmit Power (Pt): ${ptDb.toFixed(5)} dB (${ptWatt.toFixed(5)} watt)`;
+        document.getElementById("powerTransmissionResults").innerHTML = results;
+    } catch (e) {
+        alert(e.message);
+    }
+}
+
+function getEbNo(modulationMethod, maxBER) {
+    // Define the mapping for Eb/No based on BER for different modulation methods
+    var ebNoMapping = {
+        "1024-QAM": { "10^-1": 2, "10^-2": 4, "10^-3": 6, "10^-4": 8, "10^-5": 10, "10^-6": 12, "10^-9": 14 },
+        "64-QAM": { "10^-1": 1, "10^-2": 2, "10^-3": 3, "10^-4": 4, "10^-5": 5, "10^-6": 6, "10^-9": 7 },
+        "QPSK": { "10^-1": 0.5, "10^-2": 1, "10^-3": 1.5, "10^-4": 2, "10^-5": 2.5, "10^-6": 3, "10^-9": 3.5 },
+        "8-PSK": { "10^-1": 1.5, "10^-2": 3, "10^-3": 4.5, "10^-4": 6, "10^-5": 7.5, "10^-6": 9, "10^-9": 10.5 }
+    };
+
+    var berKey = `10^${Math.log10(maxBER)}`;
+    return ebNoMapping[modulationMethod][berKey];
+}
+
+function calculateThroughputCSMA() {
+    try {
+        var dataTransmissionBw = parseFloat(document.getElementById("dataTransmissionBw").value);
+        var csmaMethod = document.getElementById("csmaMethod").value;
+        var maxSignalPropagationTime = parseFloat(document.getElementById("maxSignalPropagationTime").value);
+        var frameSize = parseFloat(document.getElementById("frameSize").value);
+        var frameRate = parseFloat(document.getElementById("frameRate").value);
+        var dataTransmissionBwUnit = document.getElementById("dataTransmissionBwUnit").value;
+        var maxSignalPropagationTimeUnit = document.getElementById("maxSignalPropagationTimeUnit").value;
+        var frameSizeUnit = document.getElementById("frameSizeUnit").value;
+        var frameRateUnit = document.getElementById("frameRateUnit").value;
+
+        // Convert units to base units
+        if (dataTransmissionBwUnit == "kbps") {
+            dataTransmissionBw *= 1e3;
+        } else if (dataTransmissionBwUnit == "Mbps") {
+            dataTransmissionBw *= 1e6;
+        } else if (dataTransmissionBwUnit == "Gbps") {
+            dataTransmissionBw *= 1e9;
+        }
+
+        if (maxSignalPropagationTimeUnit == "ms") {
+            maxSignalPropagationTime *= 1e-3;
+        } else if (maxSignalPropagationTimeUnit == "us") {
+            maxSignalPropagationTime *= 1e-6;
+        } else if (maxSignalPropagationTimeUnit == "ns") {
+            maxSignalPropagationTime *= 1e-9;
+        }
+
+        if (frameSizeUnit == "kbits") {
+            frameSize *= 1e3;
+        } else if (frameSizeUnit == "Mbits") {
+            frameSize *= 1e6;
+        } else if (frameSizeUnit == "Gbits") {
+            frameSize *= 1e9;
+        }
+
+        if (frameRateUnit == "kframes/sec") {
+            frameRate *= 1e3;
+        } else if (frameRateUnit == "Mframes/sec") {
+            frameRate *= 1e6;
+        } else if (frameRateUnit == "Gframes/sec") {
+            frameRate *= 1e9;
+        }
+
+        if (dataTransmissionBw <= 0 || maxSignalPropagationTime <= 0 || frameSize <= 0 || frameRate <= 0) {
+            throw new Error("All inputs must be positive numbers.");
+        }
+
+        var Tb = 1 / dataTransmissionBw;
+        var T = frameSize * Tb;
+        var G = frameRate * T;
+        var alpha = maxSignalPropagationTime / T;
+        var S;
+
+        switch (csmaMethod) {
+            case "unslotted-nonpersistent":
+                S = (G * Math.exp(-2 * alpha * T)) / (G * (1 + 2 * alpha) + Math.exp(-alpha * G));
+                break;
+            case "slotted-nonpersistent":
+                S = (alpha * G * Math.exp(-2 * alpha * T)) / (G * (1 - Math.exp(-2 * alpha * G) + alpha));
+                break;
+            case "unslotted-1persistent":
+                S = (G * (1 + G + alpha * G * (1 + G + (alpha * G) / 2)) * Math.exp(-G * (1 + 2 * alpha))) / 
+                    (G * (1 + 2 * alpha) - (1 - Math.exp(-2 * alpha * G)) + (1 + alpha * G) * Math.exp(-G * (1 + alpha)));
+                break;
+            case "slotted-1persistent":
+                S = (G * (1 + alpha - Math.exp(-alpha * G)) * Math.exp(-G * (1 + alpha))) / 
+                    ((1 + alpha) * (1 - Math.exp(-alpha * G)) + alpha * Math.exp(-G * (1 + alpha)));
+                break;
+                
+            default:
+                throw new Error("Invalid CSMA method selected.");
+        }
+
+        var throughputPercent = S * 100;
+        var results = `Throughput: ${throughputPercent.toFixed(2)}%`;
+        document.getElementById("throughputCSMAResults").innerHTML = results;
+    } catch (e) {
+        alert(e.message);
+    }
+}
+
+
+function calculateCellularSystem() {
+    try {
+        var timeslotsPerCarrier = parseFloat(document.getElementById("timeslotsPerCarrier").value);
+        var cityArea = parseFloat(document.getElementById("cityArea").value);
+        var numSubscribers = parseFloat(document.getElementById("numSubscribers").value);
+        var avgCalls = parseFloat(document.getElementById("avgCalls").value);
+        var avgCallDuration = parseFloat(document.getElementById("avgCallDuration").value);
+        var gos = parseFloat(document.getElementById("gos").value);
+        var minSIR = parseFloat(document.getElementById("minSIR").value);
+        var measuredPower = parseFloat(document.getElementById("measuredPower").value);
+        var refDistance = parseFloat(document.getElementById("refDistance").value);
+        var pathLossExponent = parseFloat(document.getElementById("pathLossExponent").value);
+        var receiverSensitivity = parseFloat(document.getElementById("receiverSensitivity").value);
+
+        var cityAreaUnit = document.getElementById("cityAreaUnit").value;
+        var numSubscribersUnit = document.getElementById("numSubscribersUnit").value;
+        var avgCallsUnit = document.getElementById("avgCallsUnit").value;
+        var avgCallDurationUnit = document.getElementById("avgCallDurationUnit").value;
+        var minSIRUnit = document.getElementById("minSIRUnit").value;
+        var measuredPowerUnit = document.getElementById("measuredPowerUnit").value;
+        var refDistanceUnit = document.getElementById("refDistanceUnit").value;
+        var receiverSensitivityUnit = document.getElementById("receiverSensitivityUnit").value;
+
+        if (cityAreaUnit == "km2") {
+            cityArea *= 1e6; // Convert km² to m²
+        }
+
+        if (avgCallsUnit == "perMinute") {
+            avgCalls /= 60;
+        } else if (avgCallsUnit == "perHour") {
+            avgCalls /= 3600;
+        } else if (avgCallsUnit == "perDay") {
+            avgCalls /= 86400;
+        }
+
+        if (avgCallDurationUnit == "minutes") {
+            avgCallDuration *= 60; // Convert minutes to seconds
+        }
+
+        if (numSubscribersUnit == "kSubscribers") {
+            numSubscribers *= 1e3;
+        }
+
+        var measuredPowerWatt = convertToWatt(measuredPower, measuredPowerUnit);
+        var receiverSensitivityWatt = convertToWatt(receiverSensitivity, receiverSensitivityUnit);
+
+        if (refDistanceUnit == "km") {
+            refDistance *= 1e3; // Convert km to meters
+        }
+
+        // Convert minSIR from dB to linear
+        var minSIRLinear = Math.pow(10, minSIR / 10);
+
+        // a) Maximum distance between transmitter and receiver for reliable communication
+        var maxDistance = refDistance * Math.pow((measuredPowerWatt / receiverSensitivityWatt), (1 / pathLossExponent));
+        console.log("Max Distance: " + maxDistance);
+
+        // b) Maximum cell size assuming hexagonal cells
+        var cellSize = (3 * Math.sqrt(3) / 2) * Math.pow(maxDistance, 2);
+        console.log("Cell Size: " + cellSize);
+
+        // c) Number of cells in the service area
+        var numCells = Math.ceil(cityArea / cellSize);
+        console.log("Number of Cells: " + numCells);
+
+        // d) Traffic load in the whole cellular system in Erlangs
+        var totalTrafficLoad = numSubscribers * avgCalls * avgCallDuration;
+        console.log("Total Traffic Load: " + totalTrafficLoad);
+
+        // e) Traffic load in each cell in Erlangs
+        var trafficLoadPerCell = totalTrafficLoad / numCells;
+        console.log("Traffic Load per Cell: " + trafficLoadPerCell);
+
+        // f) Number of cells in each cluster using the SIR equation
+        var Nb = 6;
+        var N = (1 / 3) * Math.pow((minSIRLinear * Nb), (2 / pathLossExponent));
+        var possibleClusterSizes = [1, 3, 4, 7, 9, 12, 13, 16, 19, 21, 28];
+        var closestClusterSize = possibleClusterSizes.reduce((prev, curr) => Math.abs(curr - N) < Math.abs(prev - N) ? curr : prev);
+        console.log("Calculated N: " + N);
+        console.log("Cluster Size: " + closestClusterSize);
+
+        // g) Minimum number of carriers needed (in the whole system) to achieve the required Quality of Service
+        var { numChannels, numCarriersPerCell, numCarriersWholeSystem } = lookupErlangB(gos, trafficLoadPerCell, timeslotsPerCarrier, closestClusterSize);
+        console.log("Total Number of Carriers (QoS = " + gos + "): " + numCarriersWholeSystem);
+
+        var results = `
+            Maximum Distance between Transmitter and Receiver: ${convertToReadableUnit(maxDistance, 'meters')}<br>
+            Maximum Cell Size: ${convertToReadableUnit(cellSize, 'square meters')}<br>
+            Number of Cells: ${numCells}<br>
+            Traffic Load in the Whole Cellular System: ${convertToReadableUnit(totalTrafficLoad, 'Erlangs')}<br>
+            Traffic Load in Each Cell: ${convertToReadableUnit(trafficLoadPerCell, 'Erlangs')}<br>
+            Number of Cells in Each Cluster: ${closestClusterSize}<br>
+            Number of Channels: ${numChannels}<br>
+            Number of Carriers Needed Per Cell: ${numCarriersPerCell}<br>
+            Minimum Number of Carriers Needed (QoS = ${gos}): ${numCarriersWholeSystem}
+        `;
+        document.getElementById("cellularSystemResults").innerHTML = results;
+    } catch (e) {
+        alert(e.message);
+    }
+}
+
+function lookupErlangB(gos, trafficLoadPerCell, timeslotsPerCarrier, N) {
+    const ErlangBTable = {
+        "0.001": [0.001, 0.046, 0.194, 0.439, 0.762, 1.100, 1.600, 2.100, 2.600, 3.100, 3.700,
+            4.200, 4.800, 5.400, 6.100, 6.700, 7.400, 8.000, 8.700, 9.400, 10.100,
+            10.800, 11.500, 12.200, 13.000, 13.700, 14.400, 15.200, 15.900, 16.700,
+            17.400, 18.200, 19.000, 19.700, 20.500, 21.300, 22.100, 22.900, 23.700,
+            24.400, 25.200, 26.000, 26.800, 27.600, 28.400],
+        "0.002": [0.002, 0.065, 0.249, 0.535, 0.900, 1.300, 1.800,
+            2.300, 2.900, 3.400, 4.000, 4.600, 5.300, 5.900, 6.600,
+            7.300, 7.900, 8.600, 9.400, 10.100, 10.800, 11.500, 12.300,
+            13.000, 13.800, 14.500, 15.300, 16.100, 16.800, 17.600, 18.400,
+            19.200, 20.000, 20.800, 21.600, 22.400, 23.200, 24.000, 24.800, 25.600,
+            26.400, 27.200, 28.100, 28.900, 29.7],
+        "0.005": [0.005, 0.105, 0.349, 0.701, 1.132, 1.600, 2.200, 2.700,
+            3.300, 4.000, 4.600, 5.300, 6.000, 6.700, 7.400, 8.100, 8.800,
+            9.600, 10.300, 11.100, 11.900, 12.600, 13.400, 14.200, 15.000, 15.800,
+            16.600, 17.400, 18.200, 19.000, 19.900, 20.700, 21.500, 22.300, 23.200,
+            24.000, 24.800, 25.700, 26.500, 27.400, 28.200, 29.100, 29.900, 30.800, 31.7],
+        "0.01": [0.010, 0.153, 0.455, 0.869, 1.361, 1.900, 2.500, 3.100, 3.800, 4.500, 5.200,
+            5.900, 6.600, 7.400, 8.100, 8.900, 9.700, 10.400, 11.200, 12.000, 12.800, 13.700,
+            14.500, 15.300, 16.100, 17.000, 17.800, 18.600, 19.500, 20.300, 21.200, 22.000, 22.900,
+            23.800, 24.600, 25.500, 26.400, 27.300, 28.100, 29.000, 29.900, 30.800, 31.700, 32.500, 33.4],
+        "0.012": [0.012, 0.168, 0.489, 0.922, 1.431, 2.000, 2.600, 3.200, 3.900,
+            4.600, 5.300, 6.100, 6.800, 7.600, 8.300, 9.100, 9.900, 10.700, 11.500,
+            12.300, 13.100, 14.000, 14.800, 15.600, 16.500, 17.300, 18.200, 19.000,
+            19.900, 20.700, 21.600, 22.500, 23.300, 24.200, 25.100, 26.000, 26.800,
+            27.700, 28.600, 29.500, 30.400, 31.300, 32.200, 33.100, 34.000],
+        "0.013": [0.013, 0.176, 0.505, 0.946, 1.464, 2.000, 2.700, 3.300, 4.000,
+            4.700, 5.400, 6.100, 6.900, 7.700, 8.400, 9.200, 10.000, 10.800,
+            11.600, 12.400, 13.300, 14.100, 14.900, 15.800, 16.600, 17.500,
+            18.300, 19.200, 20.000, 20.900, 21.800, 22.600, 23.500, 24.400,
+            25.300, 26.200, 27.000, 27.900, 28.800, 29.700, 30.600, 31.500,
+            32.400, 33.300, 34.200],
+        "0.015": [0.020, 0.190, 0.530, 0.990, 1.520, 2.100, 2.700, 3.400, 4.100,
+            4.800, 5.500, 6.300, 7.000, 7.800, 8.600, 9.400, 10.200, 11.000, 11.800,
+            12.600, 13.500, 14.300, 15.200, 16.000, 16.900, 17.700, 18.600, 19.500,
+            20.300, 21.200, 22.100, 22.900, 23.800, 24.700, 25.600, 26.500, 27.400,
+            28.300, 29.200, 30.100, 31.000, 31.900, 32.800, 33.700, 34.600],
+        "0.02": [0.020, 0.223, 0.602, 1.092, 1.657, 2.300, 2.900, 3.600, 4.300, 5.100,
+            5.800, 6.600, 7.400, 8.200, 9.000, 9.800, 10.700, 11.500, 12.300, 13.200,
+            14.000, 14.900, 15.800, 16.600, 17.500, 18.400, 19.300, 20.200, 21.000, 21.900,
+            22.800, 23.700, 24.600, 25.500, 26.400, 27.300, 28.300, 29.200, 30.100, 31.000,
+            31.900, 32.800, 33.800, 34.700, 35.600],
+        "0.03": [0.031, 0.282, 0.715, 1.259, 1.875, 2.500, 3.200, 4.000, 4.700, 5.500,
+            6.300, 7.100, 8.000, 8.800, 9.600, 10.500, 11.400, 12.200, 13.100, 14.000,
+            14.900, 15.800, 16.700, 17.600, 18.500, 19.400, 20.300, 21.200, 22.100, 23.100,
+            24.000, 24.900, 25.800, 26.800, 27.700, 28.600, 29.600, 30.500, 31.500, 32.400,
+            33.400, 34.300, 35.300, 36.200, 37.200],
+        "0.05": [0.053, 0.381, 0.899, 1.525, 2.218, 3.000, 3.700, 4.500, 5.400, 6.200,
+            7.100, 8.000, 8.800, 9.700, 10.600, 11.500, 12.500, 13.400, 14.300, 15.200,
+            16.200, 17.100, 18.100, 19.000, 20.000, 20.900, 21.900, 22.900, 23.800,
+            24.800, 25.800, 26.700, 27.700, 28.700, 29.700, 30.700, 31.600, 32.600,
+            33.600, 34.600, 35.600, 36.600, 37.600, 38.600, 39.600],
+        "0.1": [0.111, 0.595, 1.271, 2.045, 2.881, 3.800, 4.700, 5.600, 6.500, 7.500,
+            8.500, 9.500, 10.500, 11.500, 12.500, 13.500, 14.500, 15.500, 16.600, 17.600,
+            18.700, 19.700, 20.700, 21.800, 22.800, 23.900, 24.900, 26.000, 27.100, 28.100,
+            29.200, 30.200, 31.300, 32.400, 33.400, 34.500, 35.600, 36.600, 37.700, 38.800,
+            39.900, 40.900, 42.000, 43.100, 44.200],
+        "0.2": [0.250, 1.000, 1.930, 2.950, 4.010, 5.100, 6.200, 7.400, 8.500, 9.700, 10.900,
+            12.000, 13.200, 14.400, 15.600, 16.800, 18.000, 19.200, 20.400, 21.600, 22.800, 24.100,
+            25.300, 26.500, 27.700, 28.900, 30.200, 31.400, 32.600, 33.800, 35.100, 36.300, 37.500,
+            38.800, 40.000, 41.200, 42.400, 43.700, 44.900, 46.100, 47.400, 48.600, 49.900, 51.100, 52.300],
+        "0.3": [0.429, 1.450, 2.633, 3.890, 5.189, 6.500, 7.900, 9.200, 10.600, 12.000, 13.300,
+            14.700, 16.100, 17.500, 18.900, 20.300, 21.700, 23.100, 24.500, 25.900, 27.300, 28.700,
+            30.100, 31.600, 33.000, 34.400, 35.800, 37.200, 38.600, 40.000, 41.500, 42.900, 44.300,
+            45.700, 47.100, 48.600, 50.000, 51.400, 52.800, 54.200, 55.700, 57.100, 58.500, 59.900, 61.300]
+    };
+    let numOfChannels = findTheCloseIndex(gos, trafficLoadPerCell, ErlangBTable) + 1;
+    let numCarriersPerCell = Math.ceil(numOfChannels / timeslotsPerCarrier);
+    let numCarriersWholeSystem = N * numCarriersPerCell;
+
+    return {
+        numChannels: numOfChannels,
+        numCarriersPerCell: numCarriersPerCell,
+        numCarriersWholeSystem: numCarriersWholeSystem
+    };
+}
+
+function findTheCloseIndex(gos, trafficLoadPerCell, ErlangBTable) {
+    let table = ErlangBTable[gos.toString()];
+    let index = table.findIndex((value) => value >= trafficLoadPerCell);
+    if (index === -1) {
+        index = table.length - 1; 
+    }
+    return index;
+}
+
+
+</script>
+</body>
+</html>
