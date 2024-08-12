@@ -1,0 +1,38 @@
+# header information:
+HNAND|9.07
+
+# Views:
+Vschematic|sch
+
+# Technologies:
+Tbicmos|ScaleFORbicmos()D300.0
+Tmocmos|ScaleFORmocmos()D300.0|mocmosAnalog()BT|mocmosNumberOfMetalLayers()I4
+
+# Cell nand;1{sch}
+Cnand;1{sch}||schematic|1702148747537|1702150012193|
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NOff-Page|conn@0||-65|2||||
+NOff-Page|conn@1||-65|-8||||
+NOff-Page|conn@2||-65|-18||||
+NOff-Page|conn@3||-29|2||||
+NGround|gnd@0||-54|-17||||
+NTransistor|nmos@0||-55|-1|||R||ATTR_length(D5G0.5;X-0.5;Y-1;)S2|ATTR_width(D5G1;X0.5;Y-1;)S2
+NTransistor|nmos@1||-55|-8|||R||ATTR_length(D5G0.5;X-0.5;Y-1;)S2|ATTR_width(D5G1;X0.5;Y-1;)S2
+NTransistor|nmos@2||-46|-10|||R||ATTR_length(D5G0.5;X-0.5;Y-1;)S2|ATTR_width(D5G1;X0.5;Y-1;)S2
+NTransistor|nmos@3||-47|0|||R||ATTR_length(D5G0.5;X-0.5;Y-1;)S2|ATTR_width(D5G1;X0.5;Y-1;)S2
+NWire_Pin|pin@0||-53|4||||
+NWire_Pin|pin@1||-31|2||||
+NWire_Pin|pin@2||-34|2||||
+NTransistor|pmos@0||-58|6|||R|2|ATTR_length(D5G0.5;X-0.5;Y-1;)S2|ATTR_width(D5G1;X0.5;Y-1;)S2
+NTransistor|pmos@1||-49|6|||XR|2|ATTR_length(D5G0.5;X-0.5;Y-1;)S2|ATTR_width(D5G1;X0.5;Y-1;)S2
+NPower|pwr@0||-53|13||||
+Awire|net@0|||1800|pmos@0|d|-56|8|pmos@1|d|-51|8
+Awire|net@2|||1800|pmos@0|s|-56|4|pin@0||-53|4
+Awire|net@3|||1800|pin@0||-53|4|pmos@1|s|-51|4
+Awire|net@4|||2700|nmos@0|d|-53|1|pin@0||-53|4
+Awire|net@5|||900|nmos@0|s|-53|-3|nmos@1|d|-53|-6
+Awire|net@7|||900|conn@3|a|-31|2|pin@1||-31|2
+Awire|net@8|||1800|nmos@3|d|-45|2|pin@2||-34|2
+Awire|net@9|||1800|pin@2||-34|2|pin@1||-31|2
+Awire|net@10|||2250|nmos@2|d|-44|-8|pin@2||-34|2
+X
