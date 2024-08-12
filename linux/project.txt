@@ -1,0 +1,308 @@
+#!/bin/bash
+                           #  Jalila Muadi & Aya Dahbour  #
+
+read_data(){
+
+     #remove previously created temps
+    if test -f "tempSelected"; then
+        rm tempSelected
+        rm tempFeatures
+        rm tempLines
+    fi
+    fileSelectedFlag="1"
+    echo "Please input the name of the dataset file "
+    #verify that the file exists
+    read filename
+    if test -f "$filename"; then
+        #file exists
+        echo -e $filename >> "tempSelected"
+        echo "$filename"" has been Selected"
+        #test the format
+        rawData=$(cat "$filename")
+        #rawData=$testdata
+        delimiter=";"
+        if [[ $rawData  == "$delimiter"  ]]; then
+            #file has the dilimiter
+            features_flag="0"
+
+            while IFS=";" read -r line
+                do
+                    if [[ $features_flag == "0" ]]; then
+                        #read features line
+                        echo "features line = ""$line"
+                        currentFeatures="$line"
+                        echo -e $line >> "tempFeatures"
+                        features_flag="1"
+                        fileSelectedFlag="1"
+                    else
+                        #read lines
+                        echo "line = " "$line"
+                        echo -e $line >>"tempLines"
+                    fi
+                done < $filename
+                fileSelectedFlag=1
+        else
+            echo "The format of the data in the dataset file is wrong"
+            return
+        fi
+    else
+        #file does not exist
+        echo "file does not exist"
+        fileSelectedFlag=0
+       return
+    fi
+}
+
+print_feature(){
+    if [ "$fileSelectedFlag" = "1" ]; then
+    #cat tempSelected
+        echo "List of available features: ""$currentFeatures"
+    else 
+        echo "you must first read a dataset from a file"
+        return
+    fi
+}
+
+lableEncode(){
+if [ "$fileSelectedFlag" = "1" ]; then
+    echo "List of available features : ""$currentFeatures"
+    echo "Please input the name of the categorical feature for label encoding : "; read lFeature
+    echo " "
+    if [[  $currentFeatures == "$lFeature"";"  ]] ; then 
+        echo "selected feature = " "$lFeature"
+        
+        index=-1
+        for i in "${!featuresArray[@]}"; do
+            if [[ "${featuresArray[$i]}" == *"$lFeature" ]]; then
+                index=$i
+                break
+            fi
+        done
+
+        if [ $index -gt -1 ]; then
+            echo "Index of the Selected Feature : $index"
+
+            #label encoding
+            #going 2D 
+            #empty lists 
+            newColumn=""
+            dictArray=('')
+            dIndex="-1"
+            #cat tempLines
+
+            while IFS="" read -r p || [ -n "$p" ]
+            do
+                #printf '%s\n' "$p"
+                #split the line to an array by the delimiter 
+                IFS=';' read -r -a linesArray <<<$p
+                # requested feature : its value
+                currentValue="${linesArray[$index]}"
+                # echo "$lFeature : ""$currentValue"
+                #valuesArr+=("${linesArray[$index]}")
+                valuesArr+=("$currentValue")
+                # echo "all ""${valuesArr[@]}"
+            done < tempLines
+
+           #remove duplicates and add the dictionary array
+           while IFS= read -r -d '' x
+           do
+                dictArray+=("$x")
+           done < <(printf "%s\0" "${valuesArr[@]}" | sort -uz)
+
+           echo "dictionary of column $index {""${dictArray[@]}}"
+
+            for ii in "${!valuesArr[@]}"
+            do
+                echo " index---------------content"
+                echo " $ii                  ${valuesArr[$ii]}"
+                dictIndex=-1
+                for iii in "${!dictArray[@]}";
+                do
+                    if [[ "${dictArray[$iii]}" = "${valuesArr[$ii]}" ]]; then
+                        dictIndex=$iii
+                        break
+                    fi
+                done
+                
+                if [ $dictIndex -gt -1 ]; then
+                    echo "Index of value in Dictionary is : $dictIndex"
+                    dictId=$dictIndex
+                    encodedArr+=("$dictId")
+
+                else
+                    echo "Element is not in Dictionary."
+                fi
+                echo "label encoded column = ""${encodedArr[@]}"
+            done
+            else
+                echo "Element is not in Array."
+                #return to main menu
+                return
+
+            fi
+    else
+        echo "The name of categorical feature is wrong"
+        return
+    fi
+else 
+  echo "you must first read a dataset from a file"
+  return
+fi
+flagSaved=0
+}
+
+oneHotEncoded(){
+if [ "$fileSelectedFlag" = "1" ]; then
+    echo "List of available features : ""$currentFeatures"
+    echo "Please input the name of the categorical feature for one-hot encoding : "; read lFeature
+    echo " "
+    if [[  $currentFeatures == "$lFeature"";"  ]] ; then 
+        echo "selected feature = " "$lFeature"
+        index=-1
+        for i in "${!featuresArray[@]}"; do
+            if [[ "${featuresArray[$i]}" == *"$lFeature" ]]; then
+                index=$i
+                break
+            fi
+        done
+        if [ $index -gt -1 ]; then
+            echo "Index of the Selected Feature : $index"
+        else
+            echo "Element is not in Array."
+            #return to main menu
+            return
+         fi
+    else
+        echo "The name of categorical feature is wrong"
+        return
+    fi
+else 
+  echo "you must first read a dataset from a file"
+  return
+fi
+flagSaved=0
+}
+
+scaled(){
+   if [ "$fileSelectedFlag" = "1" ]; then
+    echo "List of available features : ""$currentFeatures"
+    echo "Please input the name of the feature to be scaled : "; read lFeature
+    echo " "
+    if [[  $currentFeatures == "$lFeature"";"  ]] ; then 
+        echo "selected feature = " "$lFeature"
+        
+        index=-1
+        for i in "${!featuresArray[@]}"; do
+            if [[ "${featuresArray[$i]}" == *"$lFeature" ]]; then
+                index=$i
+                break
+            fi
+        done
+
+        if [ $index -gt -1 ]; then
+            echo "Index of the Selected Feature : $index"
+
+         else
+             echo "Element is not in Array."
+             #return to main menu
+             return
+         fi
+    else
+        echo "The name of categorical feature is wrong"
+        return
+    fi
+else 
+  echo "you must first read a dataset from a file"
+  return
+fi
+flagSaved=0
+}
+
+saveData(){
+
+ if [ "$fileSelectedFlag" = "1" ]; then
+     flagSaved=1
+     echo "Please input the name of the file to save the processed dataset: "; read sFileName
+     echo "The $sFileName is saved.."
+ else 
+        echo "you must first read a dataset from a file"
+        return
+ fi
+
+}
+
+Exit(){
+if [ "$flagSaved" = "1" ]; then
+     echo "Are you sure you want to exit (yes/no)"; read op
+     if [ "$op" == "yes" ]; then
+            #clean
+            rm tempSelected
+            rm tempFeatures
+            rm tempLines
+            exit
+     else
+         return
+     fi
+elif  [ "$flagSaved" = "0" ]; then
+    echo "The processed dataset is not saved. Are you sure you want to exit (yes/no)"; read op1
+    if [ "$op1" == "yes" ]; then
+            #clean
+            rm tempSelected
+            rm tempFeatures
+            rm tempLines
+            exit
+     else
+         return
+     fi
+else
+    echo "Are you sure you want to exit (yes/no)"; read op2
+     if [ "$op2" == "yes" ]; then
+         exit
+     else
+         return
+     fi
+fi
+}
+
+# Main menu
+mneu(){
+	echo "|---------------------- MENU ----------------------"
+	echo "| r) Read a Dataset From a File.                   "
+	echo "| p) Print The Name Of The Feature.                "
+	echo "| l) Encode a Feature using Label Encoding.        "
+	echo "| o) Encode a Feature Using one-hot Encoding.      "
+	echo "| m) Applay MinMax Scalling.                       "
+	echo "| s) Save The Processed Dataset.                   "
+	echo "| e) Exit...                                       "
+	echo '| Please Enter Any Option From The Above Menu:     ';   read option
+	echo '--------------------------------------------------'
+    userInput="$option"
+    currentFeatures="-"
+}
+
+# Switch statement for the option inpot 
+             # MAIN #
+while true; do
+    mneu
+    if test -f "tempSelected"; then
+        fileSelectedFlag="1"
+        filename="$(cat tempSelected)"
+        currentFeatures="$(cat tempFeatures)"
+        currentLines="$(cat tempLines)"
+        index=0
+        valuesArr=()
+        currentValue=""
+        encodedArr=('')
+        IFS=';' read -r -a featuresArray <<<$currentFeatures
+    fi
+	case $option in
+		r) read_data ;;
+		p) print_feature ;;
+		l) lableEncode ;;
+		o) oneHotEncoded;;
+        m) scaled;;
+		s) saveData ;;
+		e) Exit ;;
+		*) echo "Invalid Choise!! Try Again "
+	esac
+done
