@@ -1,0 +1,122 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/Sun"
+        android:layout_width="350dp"
+        android:layout_height="159dp"
+        android:layout_marginBottom="-5dp"
+        android:src="@drawable/sun"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/Earth"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:src="@drawable/earth"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/LowerCloud"
+        android:layout_width="408dp"
+        android:layout_height="163dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginEnd="-127dp"
+        android:layout_marginBottom="-29dp"
+        android:src="@drawable/cloud"
+        app:layout_constraintBottom_toTopOf="@id/Earth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/UpperCloud"
+        android:layout_width="match_parent"
+        android:layout_height="158dp"
+        android:layout_marginStart="-111dp"
+        android:layout_marginEnd="111dp"
+        android:layout_marginBottom="35dp"
+        android:src="@drawable/cloud"
+        app:layout_constraintBottom_toTopOf="@id/Earth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/LightRed"
+        android:layout_width="49dp"
+        android:layout_height="58dp"
+        android:src="@drawable/redd"
+        app:layout_constraintBottom_toTopOf="@id/Earth"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:id="@+id/LightGreen"
+        android:layout_width="49dp"
+        android:layout_height="58dp"
+        android:src="@drawable/greeen"
+        app:layout_constraintBottom_toTopOf="@id/Earth"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:id="@+id/LightOrange"
+        android:layout_width="49dp"
+        android:layout_height="58dp"
+        android:src="@drawable/orangee"
+        app:layout_constraintBottom_toTopOf="@id/Earth"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:id="@+id/Rock"
+        android:layout_width="31dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="192dp"
+        android:layout_marginTop="-30dp"
+        android:layout_marginEnd="187dp"
+        android:rotation="90"
+        android:src="@drawable/rock"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Earth" />
+
+    <ImageView
+        android:id="@+id/Car"
+        android:layout_width="131dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginBottom="309dp"
+        android:rotation="-15"
+        android:scaleX="-1"
+        android:src="@drawable/car"
+        app:layout_constraintBottom_toBottomOf="@+id/Earth"
+        app:layout_constraintEnd_toEndOf="@+id/Earth"
+        app:layout_constraintHorizontal_bias="0.246"
+        app:layout_constraintStart_toStartOf="@+id/Earth"
+        app:layout_constraintTop_toTopOf="@+id/UpperCloud"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
