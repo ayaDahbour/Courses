@@ -1,0 +1,13 @@
+[Version]
+Version=15.0
+[Designs]
+aya_arch=aya_arch.adf
+[Settings]
+Active=aya_arch
+[Expand]
+aya_arch=1
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1

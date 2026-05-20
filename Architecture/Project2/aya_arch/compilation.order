@@ -1,0 +1,25 @@
+.\src\ALU.v
+.\src\ALUoutReg.v
+.\src\branchAdder.v
+.\src\DataMemory.v
+.\src\InstructionMemory.v
+.\src\InstructionRegister.v
+.\src\memDataReg.v
+.\src\mux2to1_16_bit.v
+.\src\mux4x1.v
+.\src\PCreg.v
+.\src\registerA.v
+.\src\registerB.v
+.\src\registers.v
+.\src\DATA_PATH.v
+.\src\PerformanceRegisters.v
+.\src\CU.v
+.\src\MEM_ADDER.v
+.\src\CONCAT_JUMP.v
+.\src\mux2to1_3_bit.v
+.\src\Sign_Extend_6.v
+.\src\Unsigned_Extend_6 .v
+.\src\RR.v
+.\src\EQ_check.v
+.\src\register_decrement .v
+.\src\LOOP_ADDRESS.v

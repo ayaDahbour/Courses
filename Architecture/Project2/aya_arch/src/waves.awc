@@ -1,0 +1,62 @@
+<config>
+    <version>
+        3.1
+    </version>
+    <comment>
+    </comment>
+    <databases>
+        <database id="">*virtual*</database>
+        <database id="bce92f84b1d6ef86806746216a083f00">waves.asdb</database>
+    </databases>
+    <gridshown/>
+    <signallists>
+        <signallist id="0">
+        <signal>/DATA_PATH/clk</signal>
+        <signal>/DATA_PATH/PC_value</signal>
+        <signal>/DATA_PATH/Reg_out_1</signal>
+        <signal>/DATA_PATH/alu_operand_2</signal>
+        <signal>/DATA_PATH/alu_result</signal>
+        <signal>/DATA_PATH/PC_next</signal>
+        <signal>/DATA_PATH/first_instruction</signal>
+        <signal>/DATA_PATH/instruction</signal>
+        <signal>/DATA_PATH/total_executed</signal>
+        <signal>/DATA_PATH/total_alu</signal>
+        <signal>/DATA_PATH/total_cycles</signal>
+        <signal>/DATA_PATH/loop_end</signal>
+        <signal>/DATA_PATH/PCSource</signal>
+        <signal>/DATA_PATH/PCWrite</signal>
+        <signal>/DATA_PATH/flag_executed</signal>
+        <signal>/DATA_PATH/flag_alu</signal>
+        <signal>/DATA_PATH/EQ_B</signal>
+        <signal>/DATA_PATH/PC_branch</signal>
+        <signal>/DATA_PATH/state</signal>
+        </signallist>
+    </signallists>
+    <timebases>
+        <timebase id="0">
+            <time start_time="0" end_time="2100" />
+        </timebase>
+    </timebases>
+    <prefbases>
+        <prefbase id="0" >
+        </prefbase>
+    </prefbases>
+    <bookmarkbases>
+        <bookmarks id="0">
+        </bookmarks>
+    </bookmarkbases>
+    <cursorbases>
+        <cursors id="0">
+            <cursor value="1264" label="Cursor 1" locked="0" />
+        </cursors>
+    </cursorbases>
+    <measurementbases>
+    </measurementbases>
+    <commentbases>
+        <comments id="0">
+        </comments>
+    </commentbases>
+    <views>
+        <view signallist="0" propertybase="0" prefbase="0" type="1" bookmarks="0" cursors="0" measurements="-1" comments="-1" />
+    </views>
+</config>

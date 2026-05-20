@@ -1,0 +1,42 @@
+Active-HDL 15.0.261.9132 2025-01-14 12:38:40
+
+Elaboration top modules:
+Verilog Module                DATA_PATH
+
+
+--------------------------------------------------------------------------------------------
+Verilog Module          | Library  | Info | Compiler Version          | Compilation Options
+--------------------------------------------------------------------------------------------
+DATA_PATH               | aya_arch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+CU                      | aya_arch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+ALU                     | aya_arch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+ALUoutReg               | aya_arch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+mux4x1                  | aya_arch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+mux2to1_16_bit          | aya_arch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+InstructionMemory       | aya_arch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+InstructionRegister     | aya_arch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+PCreg                   | aya_arch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+mux2to1_3_bit           | aya_arch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+registers               | aya_arch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+registerB               | aya_arch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+registerA               | aya_arch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+Sign_Extend_6           | aya_arch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+Unsigned_Extend_6       | aya_arch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+MEM_ADDER               | aya_arch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+DataMemory              | aya_arch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+memDataReg              | aya_arch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+CONCAT_JUMP             | aya_arch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+RR                      | aya_arch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+EQ_check                | aya_arch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+register_decrement      | aya_arch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+LOOP_ADDRESS            | aya_arch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+branchAdder             | aya_arch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+PerformanceRegisters    | aya_arch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+loop_pulse              | aya_arch |      | 15.0.261.9132 (Windows64) | -O2 -sv2k17
+--------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------
+Library                 | Comment
+--------------------------------------------------------------------------------------------
+aya_arch                | None
+--------------------------------------------------------------------------------------------

@@ -1,0 +1,27 @@
+[Files List]
+C:/Aldec/Active-HDL-Student-Edition/vlib/std/src/standard.vhd=S
+C:/Users/EASY LIFE/Desktop/subjects/Architecture/arch_second_proj/aya_arch/src/register_decrement .v=S
+C:/Users/EASY LIFE/Desktop/subjects/Architecture/arch_second_proj/aya_arch/src/PerformanceRegisters.v=S
+C:/Users/EASY LIFE/Desktop/subjects/Architecture/arch_second_proj/aya_arch/src/branchAdder.v=S
+C:/Users/EASY LIFE/Desktop/subjects/Architecture/arch_second_proj/aya_arch/src/LOOP_ADDRESS.v=S
+C:/Users/EASY LIFE/Desktop/subjects/Architecture/arch_second_proj/aya_arch/src/EQ_check.v=S
+C:/Users/EASY LIFE/Desktop/subjects/Architecture/arch_second_proj/aya_arch/src/RR.v=S
+C:/Users/EASY LIFE/Desktop/subjects/Architecture/arch_second_proj/aya_arch/src/CONCAT_JUMP.v=S
+C:/Users/EASY LIFE/Desktop/subjects/Architecture/arch_second_proj/aya_arch/src/mux2to1_16_bit.v=S
+C:/Users/EASY LIFE/Desktop/subjects/Architecture/arch_second_proj/aya_arch/src/memDataReg.v=S
+C:/Users/EASY LIFE/Desktop/subjects/Architecture/arch_second_proj/aya_arch/src/DataMemory.v=S
+C:/Users/EASY LIFE/Desktop/subjects/Architecture/arch_second_proj/aya_arch/src/MEM_ADDER.v=S
+C:/Users/EASY LIFE/Desktop/subjects/Architecture/arch_second_proj/aya_arch/src/Unsigned_Extend_6 .v=S
+C:/Users/EASY LIFE/Desktop/subjects/Architecture/arch_second_proj/aya_arch/src/Sign_Extend_6.v=S
+C:/Users/EASY LIFE/Desktop/subjects/Architecture/arch_second_proj/aya_arch/src/registerA.v=S
+C:/Users/EASY LIFE/Desktop/subjects/Architecture/arch_second_proj/aya_arch/src/registerB.v=S
+C:/Users/EASY LIFE/Desktop/subjects/Architecture/arch_second_proj/aya_arch/src/registers.v=S
+C:/Users/EASY LIFE/Desktop/subjects/Architecture/arch_second_proj/aya_arch/src/mux2to1_3_bit.v=S
+C:/Users/EASY LIFE/Desktop/subjects/Architecture/arch_second_proj/aya_arch/src/PCreg.v=S
+C:/Users/EASY LIFE/Desktop/subjects/Architecture/arch_second_proj/aya_arch/src/InstructionRegister.v=S
+C:/Users/EASY LIFE/Desktop/subjects/Architecture/arch_second_proj/aya_arch/src/InstructionMemory.v=S
+C:/Users/EASY LIFE/Desktop/subjects/Architecture/arch_second_proj/aya_arch/src/mux4x1.v=S
+C:/Users/EASY LIFE/Desktop/subjects/Architecture/arch_second_proj/aya_arch/src/ALUoutReg.v=S
+C:/Users/EASY LIFE/Desktop/subjects/Architecture/arch_second_proj/aya_arch/src/ALU.v=S
+C:/Users/EASY LIFE/Desktop/subjects/Architecture/arch_second_proj/aya_arch/src/CU.v=S
+C:/Users/EASY LIFE/Desktop/subjects/Architecture/arch_second_proj/aya_arch/src/DATA_PATH.v=S

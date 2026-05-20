@@ -1,0 +1,374 @@
+timestamp=1736842293773
+
+[~A]
+C:/Users/EASY LIFE/Desktop/subjects/Architecture/arch_second_proj/aya_arch/src/register_decrement .v_PerformanceRegisters.v_branchAdder.v_LOOP_ADDRESS.v_EQ_check.v_RR.v_CONCAT_JUMP.v_mux2to1_16_bit.v_memDataReg.v_DataMemory.v_MEM_ADDER.v_Unsigned_Extend_6 .v_Sign_Extend_6.v_registerA.v_registerB.v_registers.v_mux2to1_3_bit.v_PCreg.v_InstructionRegister.v_InstructionMemory.v_mux4x1.v_ALUoutReg.v_ALU.v_CU.v_DATA_PATH.v=0*3269606*3277763
+C:/Users/hp/Desktop/aya_arch/src/ALU.v=0*202377*203624
+C:/Users/hp/Desktop/aya_arch/src/ALU.v_ALUoutReg.v_branchAdder.v_DataMemory.v_InstructionMemory.v_InstructionRegister.v_memDataReg.v_mux2to1_15_bit.v_mux3x1.v_mux4x1.v_mux5x1.v_PCreg.v_registerA.v_registerB.v_registers.v_SignExtender6to16 .v_DATA_PATH.v_PerformanceRegisters.v_CU.v_MEM_ADDER.v_CONCAT_JUMP.v_mux2to1_3_bit.v_Sign_Extend_9.v_Unsigned_Extend_9.v_Sign_Extend_6.v_Unsigned_Extend_6 .v_RR.v_EQ_check.v_register_decrement .v_LOOP_ADDRESS.v_datapath_tb.v=0*409764*417420
+C:/Users/hp/Desktop/aya_arch/src/ALU.v_ALUoutReg.v_branchAdder.v_DataMemory.v_InstructionMemory.v_InstructionRegister.v_memDataReg.v_mux2to1_15_bit.v_mux4x1.v_PCreg.v_registerA.v_registerB.v_registers.v_DATA_PATH.v_PerformanceRegisters.v_CU.v_MEM_ADDER.v_CONCAT_JUMP.v_mux2to1_3_bit.v_Sign_Extend_9.v_Unsigned_Extend_9.v_Sign_Extend_6.v_Unsigned_Extend_6 .v_RR.v_EQ_check.v_register_decrement .v_LOOP_ADDRESS.v_datapath_tb.v=0*463894*471335
+C:/Users/hp/Desktop/aya_arch/src/ALU.v_ALUoutReg.v_branchAdder.v_DataMemory.v_InstructionMemory.v_InstructionRegister.v_memDataReg.v_mux2to1_15_bit.v_mux4x1.v_PCreg.v_registerA.v_registerB.v_registers.v_SignExtender6to16 .v_DATA_PATH.v_PerformanceRegisters.v_CU.v_MEM_ADDER.v_CONCAT_JUMP.v_mux2to1_3_bit.v_Sign_Extend_9.v_Unsigned_Extend_9.v_Sign_Extend_6.v_Unsigned_Extend_6 .v_RR.v_EQ_check.v_register_decrement .v_LOOP_ADDRESS.v_datapath_tb.v=0*447284*454810
+C:/Users/hp/Desktop/aya_arch/src/ALU.v_ALUoutReg.v_branchAdder.v_DataMemory.v_InstructionMemory.v_InstructionRegister.v_memDataReg.v_mux2to1_16_bit.v_mux4x1.v_PCreg.v_registerA.v_registerB.v_registers.v_DATA_PATH.v_PerformanceRegisters.v_CU.v_MEM_ADDER.v_CONCAT_JUMP.v_mux2to1_3_bit.v_Sign_Extend_6.v_Unsigned_Extend_6 .v_RR.v_EQ_check.v_register_decrement .v_LOOP_ADDRESS.v=0*3253063*3261126
+C:/Users/hp/Desktop/aya_arch/src/ALU.v_ALUoutReg.v_branchAdder.v_DataMemory.v_InstructionMemory.v_InstructionRegister.v_memDataReg.v_mux2to1_16_bit.v_mux4x1.v_PCreg.v_registerA.v_registerB.v_registers.v_DATA_PATH.v_PerformanceRegisters.v_CU.v_MEM_ADDER.v_CONCAT_JUMP.v_mux2to1_3_bit.v_Sign_Extend_9.v_Unsigned_Extend_9.v_Sign_Extend_6.v_Unsigned_Extend_6 .v_RR.v_EQ_check.v_register_decrement .v_LOOP_ADDRESS.v=0*3203010*3211157
+C:/Users/hp/Desktop/aya_arch/src/ALU.v_ALUoutReg.v_branchAdder.v_DataMemory.v_InstructionMemory.v_InstructionRegister.v_memDataReg.v_mux2to1_16_bit.v_mux4x1.v_PCreg.v_registerA.v_registerB.v_registers.v_DATA_PATH.v_PerformanceRegisters.v_CU.v_MEM_ADDER.v_CONCAT_JUMP.v_mux2to1_3_bit.v_Sign_Extend_9.v_Unsigned_Extend_9.v_Sign_Extend_6.v_Unsigned_Extend_6 .v_RR.v_EQ_check.v_register_decrement .v_LOOP_ADDRESS.v_datapath_tb.v=0*1469171*1477108
+C:/Users/hp/Desktop/aya_arch/src/ALU.v_ALUoutReg.v_branchAdder.v_DataMemory.v_InstructionMemory.v_InstructionRegister.v_memDataReg.v_mux2to1_16_bit.v_mux4x1.v_PCreg.v_registerA.v_registerB.v_registers.v_DATA_PATH.v_PerformanceRegisters.v_CU.v_MEM_ADDER.v_CONCAT_JUMP.v_mux2to1_3_bit.v_Unsigned_Extend_9.v_Sign_Extend_6.v_Unsigned_Extend_6 .v_RR.v_EQ_check.v_register_decrement .v_LOOP_ADDRESS.v=0*3219905*3228004
+C:/Users/hp/Desktop/aya_arch/src/ALUoutReg.v=0*204731*205151
+C:/Users/hp/Desktop/aya_arch/src/CONCAT_JUMP.v=0*232376*232782
+C:/Users/hp/Desktop/aya_arch/src/CU.v=0*1664974*1667036
+C:/Users/hp/Desktop/aya_arch/src/DATA_PATH.v=0*2868450*2870887
+C:/Users/hp/Desktop/aya_arch/src/DataMemory.v=0*207869*208386
+C:/Users/hp/Desktop/aya_arch/src/EQ_check.v=0*243188*243591
+C:/Users/hp/Desktop/aya_arch/src/FIveBitExtender.v_ALU.v=0*7951*9312
+C:/Users/hp/Desktop/aya_arch/src/FIveBitExtender.v_ALU.v_ALUoutReg.v=0*10880*12365
+C:/Users/hp/Desktop/aya_arch/src/FIveBitExtender.v_ALU.v_ALUoutReg.v_branchAdder.v=0*17674*19285
+C:/Users/hp/Desktop/aya_arch/src/FIveBitExtender.v_ALU.v_ALUoutReg.v_branchAdder.v_DataMemory.v=0*21422*23222
+C:/Users/hp/Desktop/aya_arch/src/FIveBitExtender.v_ALU.v_ALUoutReg.v_branchAdder.v_DataMemory.v_InstructionMemory.v=0*25638*27746
+C:/Users/hp/Desktop/aya_arch/src/FIveBitExtender.v_ALU.v_ALUoutReg.v_branchAdder.v_DataMemory.v_InstructionMemory.v_InstructionRegister.v=0*30523*32877
+C:/Users/hp/Desktop/aya_arch/src/FIveBitExtender.v_ALU.v_ALUoutReg.v_branchAdder.v_DataMemory.v_InstructionMemory.v_InstructionRegister.v_memDataReg.v=0*35893*38308
+C:/Users/hp/Desktop/aya_arch/src/FIveBitExtender.v_ALU.v_ALUoutReg.v_branchAdder.v_DataMemory.v_InstructionMemory.v_InstructionRegister.v_memDataReg.v_mux2to1.v=0*41579*44100
+C:/Users/hp/Desktop/aya_arch/src/FIveBitExtender.v_ALU.v_ALUoutReg.v_branchAdder.v_DataMemory.v_InstructionMemory.v_InstructionRegister.v_memDataReg.v_mux2to1.v_mux3x1.v=0*47611*50221
+C:/Users/hp/Desktop/aya_arch/src/FIveBitExtender.v_ALU.v_ALUoutReg.v_branchAdder.v_DataMemory.v_InstructionMemory.v_InstructionRegister.v_memDataReg.v_mux2to1.v_mux3x1.v_mux4x1.v=0*55398*58049
+C:/Users/hp/Desktop/aya_arch/src/FIveBitExtender.v_ALU.v_ALUoutReg.v_branchAdder.v_DataMemory.v_InstructionMemory.v_InstructionRegister.v_memDataReg.v_mux2to1.v_mux3x1.v_mux4x1.v_mux5x1.v=0*62057*64797
+C:/Users/hp/Desktop/aya_arch/src/FIveBitExtender.v_ALU.v_ALUoutReg.v_branchAdder.v_DataMemory.v_InstructionMemory.v_InstructionRegister.v_memDataReg.v_mux2to1.v_mux3x1.v_mux4x1.v_mux5x1.v_PCreg.v=0*69032*71844
+C:/Users/hp/Desktop/aya_arch/src/FIveBitExtender.v_ALU.v_ALUoutReg.v_branchAdder.v_DataMemory.v_InstructionMemory.v_InstructionRegister.v_memDataReg.v_mux2to1.v_mux3x1.v_mux4x1.v_mux5x1.v_PCreg.v_registerA.v=0*76319*79207
+C:/Users/hp/Desktop/aya_arch/src/FIveBitExtender.v_ALU.v_ALUoutReg.v_branchAdder.v_DataMemory.v_InstructionMemory.v_InstructionRegister.v_memDataReg.v_mux2to1.v_mux3x1.v_mux4x1.v_mux5x1.v_PCreg.v_registerA.v_registerB.v=0*83926*86874
+C:/Users/hp/Desktop/aya_arch/src/FIveBitExtender.v_ALU.v_ALUoutReg.v_branchAdder.v_DataMemory.v_InstructionMemory.v_InstructionRegister.v_memDataReg.v_mux2to1.v_mux3x1.v_mux4x1.v_mux5x1.v_PCreg.v_registerA.v_registerB.v_registers.v=0*91870*95070
+C:/Users/hp/Desktop/aya_arch/src/InstructionMemory.v=0*1702989*1703561
+C:/Users/hp/Desktop/aya_arch/src/InstructionRegister.v=0*211404*212010
+C:/Users/hp/Desktop/aya_arch/src/LOOP_ADDRESS.v=0*304992*305463
+C:/Users/hp/Desktop/aya_arch/src/MEM_ADDER.v=0*230850*231254
+C:/Users/hp/Desktop/aya_arch/src/PCreg.v=0*322344*322808
+C:/Users/hp/Desktop/aya_arch/src/PerformanceRegisters.v=0*900924*901611
+C:/Users/hp/Desktop/aya_arch/src/RR.v=0*306601*307078
+C:/Users/hp/Desktop/aya_arch/src/SignExtender6to16 .v=0*227344*227741
+C:/Users/hp/Desktop/aya_arch/src/Sign_Extend_6.v=0*238523*238931
+C:/Users/hp/Desktop/aya_arch/src/Sign_Extend_9.v=0*235454*235862
+C:/Users/hp/Desktop/aya_arch/src/SixBitExtender.v=0*206267*206692
+C:/Users/hp/Desktop/aya_arch/src/SixBitExtender.v_ALU.v_ALUoutReg.v_branchAdder.v_DataMemory.v_InstructionMemory.v_InstructionRegister.v_memDataReg.v_mux2to1.v_mux3x1.v_mux4x1.v_mux5x1.v_PCreg.v_registerA.v_registerB.v_registers.v_controlUnit.v=0*100106*103335
+C:/Users/hp/Desktop/aya_arch/src/SixBitExtender.v_ALU.v_ALUoutReg.v_branchAdder.v_DataMemory.v_InstructionMemory.v_InstructionRegister.v_memDataReg.v_mux2to1_15_bit.v_mux3x1.v_mux4x1.v_mux5x1.v_PCreg.v_registerA.v_registerB.v_registers.v_SignExtender6to16 .v_DATA_PATH.v_PerformanceRegisters.v_CU.v_MEM_ADDER.v_CONCAT_JUMP.v_mux2to1_3_bit.v_Sign_Extend_9.v_Unsigned_Extend_9.v_Sign_Extend_6.v_Unsigned_Extend_6 .v_RR.v_EQ_check.v_register_decrement .v_LOOP_ADDRESS.v_datapath_tb.v=0*392220*399973
+C:/Users/hp/Desktop/aya_arch/src/Unsigned_Extend_6 .v=0*240065*240462
+C:/Users/hp/Desktop/aya_arch/src/Unsigned_Extend_9.v=0*236997*237393
+C:/Users/hp/Desktop/aya_arch/src/branchAdder.v=0*200608*201030
+C:/Users/hp/Desktop/aya_arch/src/datapath_tb.v=0*382528*382982
+C:/Users/hp/Desktop/aya_arch/src/memDataReg.v=0*213152*213573
+C:/Users/hp/Desktop/aya_arch/src/mux2to1_15_bit.v=0*214697*215106
+C:/Users/hp/Desktop/aya_arch/src/mux2to1_16_bit.v=0*473174*473583
+C:/Users/hp/Desktop/aya_arch/src/mux2to1_3_bit.v=0*233919*234327
+C:/Users/hp/Desktop/aya_arch/src/mux3x1.v=0*216240*216657
+C:/Users/hp/Desktop/aya_arch/src/mux4x1.v=0*217773*218206
+C:/Users/hp/Desktop/aya_arch/src/mux5x1.v=0*219329*219778
+C:/Users/hp/Desktop/aya_arch/src/registerA.v=0*222467*222903
+C:/Users/hp/Desktop/aya_arch/src/registerB.v=0*224018*224454
+C:/Users/hp/Desktop/aya_arch/src/register_decrement .v=0*2955939*2956657
+C:/Users/hp/Desktop/aya_arch/src/registers.v=0*1596524*1597216
+LastVerilogToplevel=DATA_PATH
+ModifyID=382
+Version=74
+
+[~MFT]
+0=30|0aya_arch.mgf|3277763|1667938
+1=56|1aya_arch.mgf|9811139|9760518
+3=112|3aya_arch.mgf|6544530|6500912
+
+[$root]
+A/$root=22|||1*9770531
+BinW64/$root=3*6508840
+SLP=3*6508955
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|c73a565f2ade592f8ac1c68f484c921658a78182d2d6e5deecccceef14bad244
+
+[ALU]
+A/ALU=22|../src/ALU.v|1|1*9800087
+BinW64/ALU=3*6530290
+R=../src/ALU.v|1
+SLP=3*6531720
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|b3eb40c25b2a3c0379c7730185183eecd0c7869b8b6c81f3aab5dc25dab6cfd8
+
+[ALU_tb]
+A/ALU_tb=22|../src/ALU.v|69|1*9801646
+BinW64/ALU_tb=3*6532462
+R=../src/ALU.v|69
+SLP=3*6533975
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|b991c9f412e6706da1c2ecbb67c6e54890fc313b1e86845f7337bcdedd74c263
+
+[ALUoutReg]
+A/ALUoutReg=22|../src/ALUoutReg.v|1|1*9798974
+BinW64/ALUoutReg=3*6529724
+R=../src/ALUoutReg.v|1
+SLP=3*6530093
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|5b1476c2bf88b9f18baeff7f43dcdb311028dad1b6062188cdf350f0781d23bd63e56478c68bdd3b9b0640094444271e
+
+[CONCAT_JUMP]
+A/CONCAT_JUMP=22|../src/CONCAT_JUMP.v|1|1*9780020
+BinW64/CONCAT_JUMP=3*6515989
+R=../src/CONCAT_JUMP.v|1
+SLP=3*6516419
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|ba797c7259eb0c079a06e3ea115dd0b1c470dd347c474691e44c39b2ddd07fadc140fb9a4c22666cf4742b18d6def7bc
+
+[CU]
+A/CU=22|../src/CU.v|1|1*9803832
+BinW64/CU=3*6535084
+R=../src/CU.v|1
+SLP=3*6540899
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|8fd7a358af447006a1ed9661b5317ec1c4a32cf17eaa54a851df22af1a56d835
+
+[DATA_PATH]
+A/DATA_PATH=22|../src/DATA_PATH.v|1|1*9811139
+BinW64/DATA_PATH=3*6543599
+R=../src/DATA_PATH.v|1
+SLP=3*6544530
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|4fa386fafd9a028f18fe7aa912cbe15cbd5591c1f003ccee9b2c7deed22f9a9d509872a9dc65a8bdd653e4e7c9caecef
+
+[DataMemory]
+A/DataMemory=22|../src/DataMemory.v|1|1*9783155
+BinW64/DataMemory=3*6518001
+R=../src/DataMemory.v|1
+SLP=3*6518652
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|ab5b04ae54b0797c38b8547f936232d99426d89c50ff4379bf89bab4c639842dca80fa0cb80ca7d585918922788f3339
+
+[EQ_check]
+A/EQ_check=22|../src/EQ_check.v|1|1*9777830
+BinW64/EQ_check=3*6514595
+R=../src/EQ_check.v|1
+SLP=3*6515089
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|1a8ffef90d28cf762adb4c5b193de79ddee517a8f11eaca41eeada4f35cf50f319dbb75dc7da1391e47db06a42b35092
+
+[FIveBitExtender]
+A/FIveBitExtender=22|../src/FIveBitExtender.v|1|1*213431
+BinW64/FIveBitExtender=3*184665
+R=../src/FIveBitExtender.v|1
+SLP=3*185052
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|05c19a9ffac742082fe9a65108935773dbd616a3700a3070cca07a89e1dff8dca7f84b21aab14c8394262e36942a65d5
+
+[InstructionMemory]
+A/InstructionMemory=22|../src/InstructionMemory.v|1|1*9796377
+BinW64/InstructionMemory=3*6527239
+R=../src/InstructionMemory.v|1
+SLP=3*6528056
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|b86a443a1d82ec234d09f8a4c7b8cd6b46404b5c54a2301d05949f8e3043a720f27d3540276e9bf6aa033abfed52881c
+
+[InstructionRegister]
+A/InstructionRegister=22|../src/InstructionRegister.v|1|1*9794300
+BinW64/InstructionRegister=3*6525976
+R=../src/InstructionRegister.v|1
+SLP=3*6526642
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|9ec4f13d9169273f86c74a85287f2e9932dca47cb1b5943d2fe1d655f4354c3530786011a27491bb7704c9274c5722d4
+
+[LOOP_ADDRESS]
+A/LOOP_ADDRESS=22|../src/LOOP_ADDRESS.v|1|1*9776680
+BinW64/LOOP_ADDRESS=3*6513897
+R=../src/LOOP_ADDRESS.v|1
+SLP=3*6514361
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|a372b736573f3a6d96b208df2c92b1a1ed1429ff9fe19a6f22392efeef15ac3abc7f6e2a97598ef6d56642ac7d4ef342
+
+[MEM_ADDER]
+A/MEM_ADDER=22|../src/MEM_ADDER.v|1|1*9784604
+BinW64/MEM_ADDER=3*6518988
+R=../src/MEM_ADDER.v|1
+SLP=3*6519411
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|8a290e7c55fc2b2368a7481f35131c45261bb2411064f884253113a1be164eeabcbed37369f91262f54c87d590221467
+
+[PCreg]
+A/PCreg=22|../src/PCreg.v|1|1*9793140
+BinW64/PCreg=3*6525127
+R=../src/PCreg.v|1
+SLP=3*6525693
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|c49bd9bb1ad0f40696d8b871e91db4b5578e1c5c15b525f605fd68cf5c138702
+
+[PerformanceRegisters]
+A/PerformanceRegisters=22|../src/PerformanceRegisters.v|1|1*9773662
+BinW64/PerformanceRegisters=3*6511375
+R=../src/PerformanceRegisters.v|1
+SLP=3*6512533
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|1566516f9cb32e6044af2520e94aa1556c52dffdb2ec6f8bbe48da98c4a995aea2e20e37a1cab92dd3735d43d05c0bc4
+
+[RR]
+A/RR=22|../src/RR.v|1|1*9778744
+BinW64/RR=3*6515283
+R=../src/RR.v|1
+SLP=3*6515726
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|4cb71dc58e8ddc2442cba5a879794698d5d0362b5addfa367151e32a573dcccd
+
+[SignExtender6to16]
+A/SignExtender6to16=22|../src/SignExtender6to16 .v|1|1*1031687
+BinW64/SignExtender6to16=3*544066
+R=../src/SignExtender6to16 .v|1
+SLP=3*544551
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|78875f5337de65464e16e5a0af665f1636130c29ccee35a64a156368c420489aa16792412385b78625fce7dab7ed729f
+
+[Sign_Extend_6]
+A/Sign_Extend_6=22|../src/Sign_Extend_6.v|1|1*9786551
+BinW64/Sign_Extend_6=3*6520152
+R=../src/Sign_Extend_6.v|1
+SLP=3*6520633
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|16ece29cf5406b53de0ca425d6fc03508fc1d079d6e5be6c2be350f6ec79f319c4e3f56c0eb293cc7ba175d21fc00554
+
+[Sign_Extend_9]
+A/Sign_Extend_9=22|../src/Sign_Extend_9.v|1|1*9610688
+BinW64/Sign_Extend_9=3*6397789
+R=../src/Sign_Extend_9.v|1
+SLP=3*6398268
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|73818ab4a3ed81019e8e4b1ff71dfd67c573bd79c05d84006e1ef73abe81632cb76f48b3ab58d88c8b304c614b690a1c
+
+[SixBitExtender]
+A/SixBitExtender=22|../src/SixBitExtender.v|1|1*843414
+BinW64/SixBitExtender=3*412215
+R=../src/SixBitExtender.v|1
+SLP=3*412627
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|6f972b78fb7ce1449bc482eede034d5586c0c5f6f124b7bdeed89940b2faee7c333212031925cef85b5df9c944cd06f2
+
+[Unsigned_Extend_6]
+A/Unsigned_Extend_6=22|../src/Unsigned_Extend_6 .v|1|1*9785586
+BinW64/Unsigned_Extend_6=3*6519580
+R=../src/Unsigned_Extend_6 .v|1
+SLP=3*6519957
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|12769106e54900d1e5a1f70006abc0502de965471839b4a75bcb67a8aa0492e452af56192c4bce6051cdf716ce13f301
+
+[Unsigned_Extend_9]
+A/Unsigned_Extend_9=22|../src/Unsigned_Extend_9.v|1|1*9664558
+BinW64/Unsigned_Extend_9=3*6435150
+R=../src/Unsigned_Extend_9.v|1
+SLP=3*6435529
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|12769106e54900d1e5a1f70006abc0500325d2458ff46d5c6f6519b584fafb6a5b9614e72e4a31769583479757d56754
+
+[branchAdder]
+A/branchAdder=22|../src/branchAdder.v|1|1*9775504
+BinW64/branchAdder=3*6513156
+R=../src/branchAdder.v|1
+SLP=3*6513674
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|f4fd658b91240a5ff0c832dd337b64969a4d6fa57150e61b5cfda695ea7e8f480aed4db8bda1472b21b0a4e649a0b444
+
+[datapath_tb]
+A/datapath_tb=22|../src/datapath_tb.v|3|1*4181235
+BinW64/datapath_tb=3*2689304
+R=../src/datapath_tb.v|3
+SLP=3*2689956
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|bf30bfd097be7745000fab2894cb176466e6231ed913a02c67cebeebbdef9e076190b1d767ac10962b27d62dc0786000
+
+[loop_pulse]
+A/loop_pulse=22|../src/register_decrement .v|35|1*9772592
+BinW64/loop_pulse=3*6510457
+R=../src/register_decrement .v|35
+SLP=3*6511041
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|a1e0501e6942ff99a872a67b00dafe2b8afdd118c9748f1c189faa063cb49c55daabb6272216771ff18d289532ed0ecd
+
+[memDataReg]
+A/memDataReg=22|../src/memDataReg.v|1|1*9782099
+BinW64/memDataReg=3*6517387
+R=../src/memDataReg.v|1
+SLP=3*6517792
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|1b8f3b35f70b1993e273712a9e71a5b52d526b16e6ecf4df578bee377213ff116579fcbafbd9134cf73b0cbd667db3c6
+
+[mux2to1]
+A/mux2to1=22|../src/mux2to1.v|2|1*250396
+BinW64/mux2to1=3*215041
+R=../src/mux2to1.v|2
+SLP=3*215572
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|7ed568f89727f83191a8cdbbab1b4cf926527262ddaa47cb266f3a3c4d9b973a6613153882407f352251592b9afdf52e
+
+[mux2to1_15_bit]
+A/mux2to1_15_bit=22|../src/mux2to1_15_bit.v|2|1*1075916
+BinW64/mux2to1_15_bit=3*573467
+R=../src/mux2to1_15_bit.v|2
+SLP=3*574005
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|0a5780dd1af99e131c840dbe9367873cec6fb152ac09d98c02c76404ba0206c247532794e501dc1e40157c388607df1a
+
+[mux2to1_16_bit]
+A/mux2to1_16_bit=22|../src/mux2to1_16_bit.v|2|1*9781081
+BinW64/mux2to1_16_bit=3*6516628
+R=../src/mux2to1_16_bit.v|2
+SLP=3*6517166
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|46030807d97b1989790461f589c0090b146e4de38763ba5539beb28974e498aead38e204b1826b21ba87255d006899a3
+
+[mux2to1_3_bit]
+A/mux2to1_3_bit=22|../src/mux2to1_3_bit.v|2|1*9792133
+BinW64/mux2to1_3_bit=3*6524375
+R=../src/mux2to1_3_bit.v|2
+SLP=3*6524911
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|35596b790c813a6802d050b8dfe7e4c0adb7bf12997c13d41912a35349f5ef86a062275f7592a1ded2dca48aee897ac4
+
+[mux3x1]
+A/mux3x1=22|../src/mux3x1.v|1|1*911926
+BinW64/mux3x1=3*461532
+R=../src/mux3x1.v|1
+SLP=3*462277
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|16c45cf6b9e6618dfa516cb13bd1def49d7c0a51e54cfecf5c2408c4900f4c79
+
+[mux4x1]
+A/mux4x1=22|../src/mux4x1.v|1|1*9797777
+BinW64/mux4x1=3*6528618
+R=../src/mux4x1.v|1
+SLP=3*6529470
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|e6b717cacdef1e1cfddf87fa026ec101573e9732c28c54a6889547050b402315
+
+[mux5x1]
+A/mux5x1=22|../src/mux5x1.v|1|1*914241
+BinW64/mux5x1=3*463613
+R=../src/mux5x1.v|1
+SLP=3*464548
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|f70eff3f5d09515aa7d39772845795214f05c9996a39c942307e42fb0ed0e431
+
+[registerA]
+A/registerA=22|../src/registerA.v|1|1*9787496
+BinW64/registerA=3*6520842
+R=../src/registerA.v|1
+SLP=3*6521280
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|0a838a4944a83e57b558a4a87314b658dfc7522c7c3381981427e4f29033fa88f48325d24001b19b8b723c34b09cdbb0
+
+[registerB]
+A/registerB=22|../src/registerB.v|1|1*9788539
+BinW64/registerB=3*6521522
+R=../src/registerB.v|1
+SLP=3*6521997
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|abc6f0049ad5bfd40c40e6abcd95f4e959e4ed595574a5656b8ead9383b9757aca956f7a98ac2dcf72c57f2ab251f49b
+
+[register_decrement]
+A/register_decrement=22|../src/register_decrement .v|1|1*9771001
+BinW64/register_decrement=3*6509023
+R=../src/register_decrement .v|1
+SLP=3*6509994
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|f4ea58fc19c54ab4c0d1f0fbc4925447ade5f2a1395000b5aef149f8557c20748c0479892058bbb1586c0b67ad035266
+
+[registers]
+A/registers=22|../src/registers.v|1|1*9789621
+BinW64/registers=3*6522239
+R=../src/registers.v|1
+SLP=3*6523713
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|2314fdb2a4dd7301b5d97b47fbce135ee711739d3258eb7291525b46820d6d99a76d49e18c98e609541300e0368cbde1
+
+[~U]
+$root=12|0*3262221|
+ALU=12|0*3268080|
+ALU_tb=12|0*3268349||0x10
+ALUoutReg=12|0*3267866|
+CONCAT_JUMP=12|0*3264369|
+CU=12|0*3268510|
+DATA_PATH=12|0*3269109||0x10
+DataMemory=12|0*3265033|
+EQ_check=12|0*3263936|
+FIveBitExtender=12|0*87980||0x10
+InstructionMemory=12|0*3267412|
+InstructionRegister=12|0*3267103|
+LOOP_ADDRESS=12|0*3263703|
+MEM_ADDER=12|0*3265290|
+PCreg=12|0*3266885|
+PerformanceRegisters=12|0*3263153|
+RR=12|0*3264149|
+SignExtender6to16=12|0*442882||0x10
+Sign_Extend_6=12|0*3265733|
+Sign_Extend_9=12|0*3202375||0x10
+SixBitExtender=12|0*383899||0x10
+Unsigned_Extend_6=12|0*3265518|
+Unsigned_Extend_9=12|0*3219478||0x10
+branchAdder=12|0*3263473|
+datapath_tb=12|0*1469009||0x10
+loop_pulse=12|0*3262942|
+memDataReg=12|0*3264816|
+mux2to1=12|0*98320||0x10
+mux2to1_15_bit=12|0*458327|
+mux2to1_16_bit=12|0*3264592|
+mux2to1_3_bit=12|0*3266665|
+mux3x1=12|0*403765||0x10
+mux4x1=12|0*3267646|
+mux5x1=12|0*404199||0x10
+registerA=12|0*3265940|
+registerB=12|0*3266156|
+register_decrement=12|0*3262659|
+registers=12|0*3266372|
