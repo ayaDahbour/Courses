@@ -1,0 +1,30 @@
+Aya Dahbour 1201738 
+
+1. Begin by monitoring the ultrasonic sensors. These sensors detect the distance at the first gate. if the average distance detected by the six sensors falls below the user-defined threshold, the first gate opens. Otherwise, the system will remain in this condition and continuously monitor.
+
+2. After opening the first gate, the camera modules are activated. Three cameras are mounted to take captures of the intruder from various sides. Each camera will capture a photo for processing.
+
+3. After capturing the images, the system will run 4 algorithms for each camera to analyze the images and calculate the probability. The results are averaged across all the algorithms and cameras. If the average is above the user-defined threshold, the intruder is considered friendly, and we move to the next step. Otherwise, the intruder is 
+marked as suspicious, and the following actions are taken:
+   - Lights and sirens are activated to disturb the intruder.
+   - The first gate is closed and disabled.
+   - All sensors and cameras are turned off temporarily.
+Then after a user-defined amount of time, the lights and sirens will stop, and the sensors and cameras will restart to monitor again.
+
+4. If the intruder passes the camera-based id, the first gate and its components are disabled, and the second gate is enabled. At this point, the intruder will go through further identification using hand and eye recognition systems. 
+Both systems will calculate probabilities to confirm the identity of the person.
+
+5. Based on the results of the hand and eye recognition systems, if the average probability is above the threshold, the person is granted access, and both gates along with sensors and cameras are enabled again. 
+if the probability is below the threshold, the second gate is closed and disabled, and alternate lights are activated to disturb the intruder. The system will remain in this locked state until it is manually reset by user.
+
+6. The system is designed to permanently disable (end) itself and will stop functioning completely until a manual reset if one of these happened:
+   - if the number of intruders identified successfully exceeds the user-defined threshold.
+   - if he number of misidentified intruders exceeds the user-defined threshold.
+
+--------
+
+we will use arrays for storing sensor readings, camera data, and algorithm outputs.
+also use shared memory for passing data between processes (e.g., cameras and gate control).
+As for synchronize access to shared resources in multi-threaded parts of the program  we should use mutexes. It should apply many communication techniques like multi-threading to process camera images in parallel and to handle simultaneous sensor reads.
+Also multi-processing for isolating larger tasks like sensor monitoring and gate control into separate processes.
+

@@ -1,0 +1,6 @@
+ultrasonicThreshold = 2.5    # set the minimum distance in meters
+cameraThreshold = 0.7        # the min probability for identifying intruders as friends
+handEyeThreshold = 0.75     # the minimum probability for access through second gate
+maxIdentifiedIntruders = 50 # the max that allowed successfully identified intruders
+maxMisidentifiedIntruders = 5 # max allowed misidentified intruders
+resetTime = 30               # time to reset after lights or sirens are activated
