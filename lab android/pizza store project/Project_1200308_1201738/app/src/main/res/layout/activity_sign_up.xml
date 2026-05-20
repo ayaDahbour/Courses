@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/p_background"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center_horizontal"
+        tools:context=".SignUp">
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="SIGN UP NEWBIE!"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="28sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/introText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="Welcome! Please fill in your details to register."
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/emailLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email Address"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp" />
+
+        <EditText
+            android:id="@+id/emailEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="textEmailAddress"
+            android:textSize="24sp"
+            android:hint="Enter your email address" />
+
+        <TextView
+            android:id="@+id/emailError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/design_default_color_error"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/phoneLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phone Number"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/phoneEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="24sp"
+            android:inputType="phone"
+            android:hint="Enter your phone number" />
+
+        <TextView
+            android:id="@+id/phoneError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/design_default_color_error"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/nameLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Full Name"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/firstNameEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="24sp"
+            android:hint="First Name"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/firstNameError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/design_default_color_error"
+            android:visibility="gone"/>
+
+        <EditText
+            android:id="@+id/lastNameEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="24sp"
+            android:hint="Last Name"
+            android:inputType="textPersonName"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:id="@+id/lastNameError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/design_default_color_error"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/genderLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gender"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+        <Spinner
+            android:id="@+id/genderSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/passwordLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create Password"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="24sp"
+            android:inputType="textPassword"
+            android:hint="Enter your password" />
+
+        <TextView
+            android:id="@+id/passwordError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/design_default_color_error"
+            android:visibility="gone"/>
+
+        <EditText
+            android:id="@+id/confirmPasswordEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="24sp"
+            android:hint="Confirm your password"
+            android:inputType="textPassword"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:id="@+id/confirmPasswordError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/design_default_color_error"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#E86238"
+            android:text="SIGN UP"
+            android:textSize="34sp"
+            android:textStyle="bold|italic" />
+    </LinearLayout>
+</ScrollView>
